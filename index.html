@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Império Manutenções</title>
+    <link rel="icon" type="image/png" href="img/LOGO_enhanced.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('Captura de tela 2025-02-07 123035.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #BFA058;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: rgba(10, 24, 51, 0.85);
+            width: 90%;
+            max-width: 1200px;
+            border-radius: 10px;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo {
+            width: 80px;
+            margin-right: 10px;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .whatsapp-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+        }
+        .whatsapp {
+            font-size: 16px;
+            background-color: #BFA058;
+            color: #0A1833;
+            padding: 8px 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            animation: blink 1s infinite alternate;
+        }
+        .volume-label {
+            font-size: 14px;
+            color: #BFA058;
+        }
+        @keyframes blink {
+            0% { opacity: 1; }
+            100% { opacity: 0.7; }
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .services {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .service {
+            flex: 1;
+            max-width: 280px;
+            text-align: center;
+            background-color: rgba(18, 34, 68, 0.85);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(191, 160, 88, 0.7);
+        }
+        .service img {
+            width: 100%;
+            max-width: 250px;
+            border-radius: 10px;
+        }
+        .service h2 {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        .appointment-button {
+            background-color: #0A1833;
+            color: #BFA058;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        @media (max-width: 600px) {
+            .title {
+                font-size: 20px;
+            }
+            .logo {
+                width: 60px;
+            }
+            .whatsapp {
+                font-size: 14px;
+                padding: 6px 12px;
+            }
+            .service {
+                max-width: 90%;
+            }
+            .service h2 {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo-container">
+            <img src="img/LOGO_enhanced.png" alt="Logo Império Manutenções" class="logo">
+            <span class="title">IMPÉRIO MANUTENÇÕES</span>
+        </div>
+        <div class="whatsapp-container">
+            <span class="volume-label">Atendimento via WhatsApp:</span>
+            <a href="https://wa.me/44999999806" class="whatsapp">📞 44 99999-9806</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="services">
+            <div class="service">
+                <img src="img/formatacao.png" alt="Formatação">
+                <h2>FORMATAÇÃO COM TODOS APPS</h2>
+            </div>
+            <div class="service">
+                <img src="img/pc_gamer.png" alt="PC Gamer">
+                <h2>MONTAGEM DE PC GAMER</h2>
+            </div>
+            <div class="service">
+                <img src="img/manutencao_celular.png" alt="Manutenção Celulares">
+                <h2>MANUTENÇÃO DE CELULARES</h2>
+            </div>
+        </div>
+    </div>
+
+    <button class="appointment-button">Atendimento apenas com hora marcada</button>
+</body>
+</html>
