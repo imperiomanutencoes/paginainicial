@@ -1,161 +1,588 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Império Manutenções</title>
-    <link rel="icon" type="image/png" href="img/LOGO_enhanced.png">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: url('Captura de tela 2025-02-07 123035.png') no-repeat center center fixed;
-            background-size: cover;
-            color: #BFA058;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            background-color: rgba(10, 24, 51, 0.85);
-            width: 90%;
-            max-width: 1200px;
-            border-radius: 10px;
-            flex-wrap: wrap;
-            text-align: center;
-        }
-        .logo-container {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .logo {
-            width: 80px;
-            margin-right: 10px;
-        }
-        .title {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .whatsapp-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            flex-wrap: wrap;
-            justify-content: center;
-            text-align: center;
-        }
-        .whatsapp {
-            font-size: 16px;
-            background-color: #BFA058;
-            color: #0A1833;
-            padding: 8px 16px;
-            border-radius: 5px;
-            text-decoration: none;
-            animation: blink 1s infinite alternate;
-        }
-        .volume-label {
-            font-size: 14px;
-            color: #BFA058;
-        }
-        @keyframes blink {
-            0% { opacity: 1; }
-            100% { opacity: 0.7; }
-        }
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 20px auto;
-            text-align: center;
-        }
-        .services {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-        .service {
-            flex: 1;
-            max-width: 280px;
-            text-align: center;
-            background-color: rgba(18, 34, 68, 0.85);
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(191, 160, 88, 0.7);
-        }
-        .service img {
-            width: 100%;
-            max-width: 250px;
-            border-radius: 10px;
-        }
-        .service h2 {
-            font-size: 18px;
-            margin-top: 10px;
-        }
-        .appointment-button {
-            background-color: #0A1833;
-            color: #BFA058;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 14px;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-        @media (max-width: 600px) {
-            .title {
-                font-size: 20px;
-            }
-            .logo {
-                width: 60px;
-            }
-            .whatsapp {
-                font-size: 14px;
-                padding: 6px 12px;
-            }
-            .service {
-                max-width: 90%;
-            }
-            .service h2 {
-                font-size: 16px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Império Manutenções</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'Montserrat',sans-serif;
+      background:#020617;
+      color:#fff;
+      overflow-x:hidden;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    /* HEADER */
+
+    header{
+      width:100%;
+      position:fixed;
+      top:0;
+      left:0;
+      z-index:999;
+      padding:18px 7%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      background:rgba(0,0,0,0.55);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(0,191,255,.15);
+    }
+
+    .logo img{
+      width:220px;
+    }
+
+    nav{
+      display:flex;
+      gap:30px;
+    }
+
+    nav a{
+      color:#fff;
+      font-weight:600;
+      transition:.3s;
+      position:relative;
+    }
+
+    nav a::after{
+      content:'';
+      width:0%;
+      height:2px;
+      background:#00bfff;
+      position:absolute;
+      left:0;
+      bottom:-6px;
+      transition:.3s;
+    }
+
+    nav a:hover{
+      color:#00bfff;
+    }
+
+    nav a:hover::after{
+      width:100%;
+    }
+
+    /* HERO */
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      padding:150px 7% 100px;
+      background:
+      linear-gradient(rgba(2,6,23,.85), rgba(2,6,23,.92)),
+      url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop') center/cover;
+    }
+
+    .hero-content{
+      max-width:700px;
+    }
+
+    .hero h1{
+      font-size:60px;
+      line-height:1.1;
+      margin-bottom:25px;
+      font-weight:800;
+    }
+
+    .hero h1 span{
+      color:#00bfff;
+      text-shadow:0 0 18px rgba(0,191,255,.8);
+    }
+
+    .hero p{
+      color:#d1d5db;
+      font-size:20px;
+      line-height:1.7;
+      margin-bottom:35px;
+    }
+
+    .buttons{
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:16px 32px;
+      border-radius:14px;
+      font-weight:700;
+      transition:.3s;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+    }
+
+    .btn-primary{
+      background:#00bfff;
+      color:#000;
+      box-shadow:0 0 25px rgba(0,191,255,.45);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-4px);
+      background:#2fd2ff;
+    }
+
+    .btn-secondary{
+      border:2px solid #00bfff;
+      color:#00bfff;
+    }
+
+    .btn-secondary:hover{
+      background:#00bfff;
+      color:#000;
+    }
+
+    /* SERVICES */
+
+    .services{
+      padding:100px 7%;
+      background:#061124;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .section-title h2{
+      font-size:46px;
+      color:#00bfff;
+      margin-bottom:14px;
+    }
+
+    .section-title p{
+      color:#cbd5e1;
+      font-size:18px;
+    }
+
+    .services-grid{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:28px;
+    }
+
+    .service-card{
+      width:320px;
+      min-height:240px;
+      background:#0b1328;
+      border-radius:22px;
+      padding:35px;
+      border:1px solid rgba(0,191,255,.15);
+      transition:.35s;
+    }
+
+    .service-card:hover{
+      transform:translateY(-10px);
+      border-color:#00bfff;
+      box-shadow:0 0 25px rgba(0,191,255,.18);
+    }
+
+    .service-card h3{
+      color:#00bfff;
+      font-size:28px;
+      margin-bottom:18px;
+    }
+
+    .service-card p{
+      color:#d1d5db;
+      line-height:1.7;
+      font-size:18px;
+    }
+
+    /* ABOUT */
+
+    .about{
+      padding:100px 7%;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:60px;
+      align-items:center;
+    }
+
+    .about img{
+      border-radius:24px;
+      border:1px solid rgba(0,191,255,.2);
+    }
+
+    .about-content h2{
+      font-size:46px;
+      color:#00bfff;
+      margin-bottom:25px;
+    }
+
+    .about-content p{
+      color:#d1d5db;
+      line-height:1.9;
+      margin-bottom:20px;
+      font-size:18px;
+    }
+
+    /* CONTACT */
+
+    .contact{
+      padding:100px 7%;
+      background:#061124;
+      text-align:center;
+    }
+
+    .contact h2{
+      font-size:46px;
+      color:#00bfff;
+      margin-bottom:18px;
+    }
+
+    .contact p{
+      color:#d1d5db;
+      font-size:18px;
+      margin-bottom:35px;
+    }
+
+    /* FOOTER */
+
+    footer{
+      text-align:center;
+      padding:28px;
+      color:#94a3b8;
+      border-top:1px solid rgba(255,255,255,.05);
+      background:#020617;
+    }
+
+    /* WHATSAPP */
+
+    .whatsapp{
+      position:fixed;
+      right:22px;
+      bottom:22px;
+      width:70px;
+      height:70px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#00bfff;
+      color:#00111f;
+      font-size:34px;
+      z-index:999;
+      box-shadow:
+      0 0 18px rgba(0,191,255,.7),
+      0 0 35px rgba(0,191,255,.4);
+      transition:.3s;
+    }
+
+    .whatsapp:hover{
+      transform:scale(1.1);
+    }
+
+    /* MOBILE */
+
+    @media(max-width:980px){
+
+      header{
+        flex-direction:column;
+        gap:20px;
+        padding:20px;
+      }
+
+      nav{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:20px;
+      }
+
+      .logo img{
+        width:180px;
+      }
+
+      .hero{
+        text-align:center;
+        justify-content:center;
+        padding:180px 20px 100px;
+      }
+
+      .hero h1{
+        font-size:42px;
+      }
+
+      .hero p{
+        font-size:17px;
+      }
+
+      .buttons{
+        justify-content:center;
+      }
+
+      .btn{
+        width:100%;
+      }
+
+      .section-title h2,
+      .about-content h2,
+      .contact h2{
+        font-size:34px;
+      }
+
+      .about{
+        grid-template-columns:1fr;
+      }
+
+      .service-card{
+        width:100%;
+        min-height:auto;
+      }
+
+      .service-card h3{
+        font-size:24px;
+      }
+
+      .service-card p{
+        font-size:16px;
+      }
+
+      .whatsapp{
+        width:62px;
+        height:62px;
+        font-size:30px;
+      }
+
+    }
+
+  </style>
 </head>
+
 <body>
-    <div class="header">
-        <div class="logo-container">
-            <img src="img/LOGO_enhanced.png" alt="Logo Império Manutenções" class="logo">
-            <span class="title">IMPÉRIO MANUTENÇÕES</span>
-        </div>
-        <div class="whatsapp-container">
-            <span class="volume-label">Atendimento via WhatsApp:</span>
-            <a href="https://wa.me/44999999806" class="whatsapp">📞 44 99999-9806</a>
-        </div>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="logo">
+      <img src="logo 2026.png" alt="Império Manutenções">
     </div>
 
-    <div class="container">
-        <div class="services">
-            <div class="service">
-                <img src="img/formatacao.png" alt="Formatação">
-                <h2>FORMATAÇÃO COM TODOS APPS</h2>
-            </div>
-            <div class="service">
-                <img src="img/pc_gamer.png" alt="PC Gamer">
-                <h2>MONTAGEM DE PC GAMER</h2>
-            </div>
-            <div class="service">
-                <img src="img/manutencao_celular.png" alt="Manutenção Celulares">
-                <h2>MANUTENÇÃO DE CELULARES</h2>
-            </div>
-        </div>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#services">Serviços</a>
+      <a href="#about">Sobre</a>
+      <a href="#contact">Contato</a>
+    </nav>
+
+  </header>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h1>
+        Assistência Técnica em
+        <span>Informática e Celulares</span>
+      </h1>
+
+      <p>
+        Especialistas em manutenção de computadores,
+        notebooks e celulares com atendimento rápido,
+        profissional e suporte especializado.
+      </p>
+
+      <div class="buttons">
+
+        <a href="https://wa.me/5544999999806"
+          class="btn btn-primary">
+
+          <i class="fa-brands fa-whatsapp"></i>
+          Chamar no WhatsApp
+
+        </a>
+
+        <a href="#services"
+          class="btn btn-secondary">
+
+          Ver Serviços
+
+        </a>
+
+      </div>
+
     </div>
 
-    <button class="appointment-button">Atendimento apenas com hora marcada</button>
+  </section>
+
+  <!-- SERVICES -->
+
+  <section class="services" id="services">
+
+    <div class="section-title">
+
+      <h2>Nossos Serviços</h2>
+
+      <p>
+        Atendimento rápido e especializado
+      </p>
+
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <h3>Formatação</h3>
+        <p>
+          Instalação e otimização completa do sistema.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Troca de Tela</h3>
+        <p>
+          Substituição de telas quebradas em celulares e notebooks.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Upgrade SSD</h3>
+        <p>
+          Mais velocidade e desempenho para seu computador.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Limpeza Interna</h3>
+        <p>
+          Manutenção preventiva e limpeza profissional.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Troca de Bateria</h3>
+        <p>
+          Baterias novas com garantia e qualidade.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Suporte Remoto</h3>
+        <p>
+          Atendimento remoto rápido para suporte técnico e configuração.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Instalação de Softwares</h3>
+        <p>
+          Instalação de programas, drivers e configuração completa.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Remoção de Vírus</h3>
+        <p>
+          Limpeza de vírus, malwares e otimização do sistema.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section class="about" id="about">
+
+    <img
+      src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?q=80&w=1200&auto=format&fit=crop"
+      alt="Assistência Técnica">
+
+    <div class="about-content">
+
+      <h2>Sobre Nós</h2>
+
+      <p>
+        A Império Manutenções oferece assistência técnica
+        especializada em informática e celulares,
+        com foco em qualidade, rapidez e confiança.
+      </p>
+
+      <p>
+        Trabalhamos com manutenção preventiva,
+        upgrades, reparos e suporte especializado
+        para garantir o melhor desempenho dos seus equipamentos.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section class="contact" id="contact">
+
+    <h2>Entre em Contato</h2>
+
+    <p>
+      Solicite agora mesmo seu orçamento pelo WhatsApp.
+    </p>
+
+    <a href="https://wa.me/5544999999806"
+      class="btn btn-primary">
+
+      <i class="fa-brands fa-whatsapp"></i>
+      Falar no WhatsApp
+
+    </a>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+    © 2026 Império Manutenções - Informática e Celulares
+  </footer>
+
+  <!-- WHATS FLOAT -->
+
+  <a class="whatsapp"
+    href="https://wa.me/5544999999806">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+  </a>
+
 </body>
+
 </html>
