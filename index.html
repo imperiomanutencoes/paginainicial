@@ -8,26 +8,17 @@
 
 <title>Império Manutenções</title>
 
-<title>Império Manutenções</title>
-
-<!-- FAVICON DESKTOP -->
-<link rel="icon" type="image/png" sizes="32x32" href="logo.png">
-
-<!-- FAVICON CELULAR / IPHONE -->
-<link rel="apple-touch-icon" href="logo.png">
-
-<!-- ANDROID -->
-<link rel="shortcut icon" href="logo.png">
-
-
+<link rel="icon" type="image/png" href="logo.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
+
+/* ===== RESET ===== */
 
 *{
 margin:0;
@@ -40,1038 +31,557 @@ scroll-behavior:smooth;
 }
 
 body{
-
 font-family:'Montserrat',sans-serif;
-
 background:#030712;
-
 color:#fff;
-
 overflow-x:hidden;
-
 }
 
-/* SCROLL */
-
-::-webkit-scrollbar{
-width:8px;
-}
-
-::-webkit-scrollbar-thumb{
-background:#00bfff;
-border-radius:20px;
-}
-
-/* HEADER */
+/* ===== HEADER ===== */
 
 header{
-
 position:fixed;
-
 top:0;
 left:0;
-
 width:100%;
-
 z-index:999;
-
 padding:18px 40px;
-
 display:grid;
-
-grid-template-columns:
-1fr auto 1fr;
-
+grid-template-columns:1fr auto 1fr;
 align-items:center;
-
 background:rgba(0,0,0,.65);
-
 backdrop-filter:blur(14px);
-
-border-bottom:
-1px solid rgba(0,191,255,.08);
-
+border-bottom:1px solid rgba(0,191,255,.08);
 }
 
-/* WEATHER */
+/* ===== WEATHER ===== */
 
 .weather-card{
-
 display:flex;
-
 align-items:center;
-
-gap:16px;
-
-padding:14px 20px;
-
-width:450px;
-
-border-radius:24px;
-
-background:
-linear-gradient(
+gap:14px;
+padding:14px 18px;
+width:420px;
+border-radius:22px;
+background:linear-gradient(
 135deg,
 rgba(0,20,50,.95),
 rgba(0,8,25,.95)
 );
-
-border:
-1px solid rgba(0,191,255,.12);
-
-box-shadow:
-0 0 25px rgba(0,191,255,.08);
-
+border:1px solid rgba(0,191,255,.12);
 }
 
 .weather-icon{
-
-width:52px;
-height:52px;
-
+width:48px;
+height:48px;
 }
 
 .weather-info{
-
 display:flex;
 flex-direction:column;
-
-gap:2px;
-
 }
 
 .weather-top{
-
 display:flex;
 align-items:center;
-
 gap:8px;
-
 }
 
 #temperature{
-
-font-size:48px;
+font-size:42px;
 font-weight:800;
-
 line-height:1;
-
 }
 
 #city{
-
-font-size:20px;
+font-size:18px;
 font-weight:700;
-
-margin-top:6px;
-
+margin-top:5px;
 }
 
 #date{
-
-font-size:14px;
-
+font-size:13px;
 color:#dbeafe;
-
 }
 
 #description{
-
-font-size:13px;
-
+font-size:12px;
 color:#00bfff;
-
 font-weight:600;
-
 text-transform:capitalize;
-
 }
 
 #clock{
-
-font-size:11px;
-
+font-size:10px;
 color:#94a3b8;
-
 }
 
-/* LOGO */
+/* ===== LOGO ===== */
 
 .logo{
-
 display:flex;
 justify-content:center;
-
 }
 
 .logo img{
-
-width:340px;
-
+width:320px;
 }
 
-/* MENU */
+/* ===== MENU ===== */
 
 .menu-mobile{
-
 display:flex;
-
 justify-content:flex-end;
-
 position:relative;
-
 }
 
 .menu-toggle{
-
 display:none;
-
-width:52px;
-height:52px;
-
+width:50px;
+height:50px;
 border:none;
-
-outline:none;
-
 background:rgba(0,191,255,.12);
-
-border:
-1px solid rgba(0,191,255,.20);
-
+border:1px solid rgba(0,191,255,.18);
 border-radius:14px;
-
 color:#00bfff;
-
-font-size:22px;
-
+font-size:20px;
 cursor:pointer;
-
-transition:.3s;
-
-backdrop-filter:blur(10px);
-
-box-shadow:
-0 0 18px rgba(0,191,255,.10);
-
-}
-
-.menu-toggle:hover{
-
-background:rgba(0,191,255,.20);
-
-transform:scale(1.05);
-
 }
 
 #mobile-menu{
-
 display:flex;
-
-gap:30px;
-
+gap:28px;
 }
 
 #mobile-menu a{
-
 color:#fff;
-
-font-size:18px;
+font-size:17px;
 font-weight:600;
-
-position:relative;
-
-transition:.3s;
-
 text-decoration:none;
-
-}
-
-#mobile-menu a::after{
-
-content:'';
-
-position:absolute;
-
-left:0;
-bottom:-6px;
-
-width:0%;
-height:2px;
-
-background:#00bfff;
-
 transition:.3s;
-
 }
 
 #mobile-menu a:hover{
-
 color:#00bfff;
-
 }
 
-#mobile-menu a:hover::after{
-
-width:100%;
-
-}
-
-/* HERO */
+/* ===== HERO ===== */
 
 .hero{
-
 position:relative;
-
 min-height:100vh;
-
 display:flex;
-
 align-items:center;
 justify-content:center;
-
 overflow:hidden;
-
-padding:
-220px 20px 120px;
-
+padding:240px 20px 120px;
 }
 
 .hero video{
-
 position:absolute;
-
 top:0;
 left:0;
-
 width:100%;
 height:100%;
-
 object-fit:cover;
-
-z-index:-3;
-
+z-index:-2;
 }
 
 .hero::before{
-
 content:'';
-
 position:absolute;
-
 width:100%;
 height:100%;
-
-background:
-linear-gradient(
+background:linear-gradient(
 180deg,
-rgba(0,0,0,.80),
-rgba(1,6,20,.94)
+rgba(0,0,0,.82),
+rgba(1,6,20,.95)
 );
-
-z-index:-2;
-
-}
-
-.hero::after{
-
-content:'';
-
-position:absolute;
-
-width:100%;
-height:100%;
-
-background:
-radial-gradient(
-circle at center,
-rgba(0,191,255,.12),
-transparent 60%
-);
-
 z-index:-1;
-
 }
 
 .hero-content{
-
 max-width:900px;
-
 text-align:center;
-
 }
 
 .hero h1{
-
 font-size:72px;
-
 line-height:1.1;
-
 font-weight:800;
-
-margin-bottom:30px;
-
-text-shadow:
-0 0 25px rgba(0,191,255,.25);
-
+margin-bottom:28px;
 }
 
 .hero h1 span{
-
 color:#00bfff;
-
 }
 
 .hero p{
-
 font-size:20px;
-
 line-height:1.8;
-
 color:#d1d5db;
-
-margin-bottom:42px;
-
+margin-bottom:40px;
 }
 
-/* BUTTONS */
+/* ===== BUTTONS ===== */
 
 .buttons{
-
 display:flex;
-
 justify-content:center;
-
 gap:20px;
-
 flex-wrap:wrap;
-
 }
 
 .btn{
-
 padding:16px 32px;
-
 border-radius:14px;
-
 font-weight:700;
-
 display:flex;
-
 align-items:center;
 justify-content:center;
-
 gap:10px;
-
 transition:.3s;
-
 text-decoration:none;
-
 }
 
 .btn-primary{
-
 background:#00bfff;
-
 color:#00111f;
-
-box-shadow:
-0 0 25px rgba(0,191,255,.35);
-
 }
 
 .btn-primary:hover{
-
-transform:translateY(-5px);
-
-background:#32d3ff;
-
+transform:translateY(-4px);
 }
 
 .btn-secondary{
-
 border:2px solid #00bfff;
-
 color:#00bfff;
-
 }
 
 .btn-secondary:hover{
-
 background:#00bfff;
-
 color:#00111f;
-
 }
 
-/* SERVICES */
+/* ===== SERVICES ===== */
 
 .services{
-
-position:relative;
-
 padding:120px 30px;
-
 background:#040b18;
-
-overflow:hidden;
-
-}
-
-.services::before{
-
-content:'';
-
-position:absolute;
-
-width:100%;
-height:100%;
-
-top:0;
-left:0;
-
-background-image:
-
-linear-gradient(
-rgba(0,191,255,.08) 1px,
-transparent 1px
-),
-
-linear-gradient(
-90deg,
-rgba(0,191,255,.08) 1px,
-transparent 1px
-);
-
-background-size:50px 50px;
-
-opacity:.25;
-
-z-index:0;
-
-}
-
-.services::after{
-
-content:'';
-
-position:absolute;
-
-top:50%;
-left:50%;
-
-transform:translate(-50%,-50%);
-
-width:900px;
-height:900px;
-
-background:
-radial-gradient(
-circle,
-rgba(0,191,255,.08),
-transparent 70%
-);
-
-z-index:0;
-
 }
 
 .section-title{
-
-position:relative;
-
-z-index:2;
-
 text-align:center;
-
 margin-bottom:60px;
-
 }
 
 .section-title h2{
-
-font-size:48px;
-
+font-size:46px;
 color:#00bfff;
-
 margin-bottom:12px;
-
 }
 
 .section-title p{
-
-font-size:18px;
-
 color:#cbd5e1;
-
 }
 
-/* CARDS */
-
 .services-grid{
-
-position:relative;
-
-z-index:2;
-
 display:grid;
-
-grid-template-columns:
-repeat(3, 320px);
-
-justify-content:center;
-
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:28px;
-
+max-width:1200px;
+margin:auto;
 }
 
 .service-card{
-
-width:320px;
-
 padding:34px;
-
 border-radius:24px;
-
-background:
-linear-gradient(
+background:linear-gradient(
 180deg,
 rgba(10,20,40,.96),
 rgba(5,10,25,.96)
 );
-
-border:
-1px solid rgba(0,191,255,.12);
-
-backdrop-filter:blur(10px);
-
-transition:.35s;
-
-box-shadow:
-0 0 20px rgba(0,191,255,.04);
-
+border:1px solid rgba(0,191,255,.12);
+transition:.3s;
 }
 
 .service-card:hover{
-
-transform:translateY(-8px);
-
+transform:translateY(-6px);
 border-color:#00bfff;
-
-box-shadow:
-0 0 28px rgba(0,191,255,.18);
-
 }
 
 .service-card h3{
-
-font-size:24px;
-
+font-size:22px;
 color:#00bfff;
-
-margin-bottom:16px;
-
+margin-bottom:14px;
 }
 
 .service-card p{
-
-font-size:16px;
-
 line-height:1.8;
-
 color:#d1d5db;
-
 }
 
-/* ABOUT */
+/* ===== ABOUT ===== */
 
 .about{
-
 padding:120px 40px;
-
 display:grid;
-
 grid-template-columns:1fr 1fr;
-
 gap:60px;
-
 align-items:center;
-
 background:#020617;
-
 }
 
 .about img{
-
 width:100%;
-
 border-radius:24px;
-
-border:
-1px solid rgba(0,191,255,.08);
-
 }
 
 .about-content h2{
-
-font-size:48px;
-
+font-size:46px;
 color:#00bfff;
-
 margin-bottom:24px;
-
 }
 
 .about-content p{
-
-font-size:18px;
-
 line-height:1.9;
-
 color:#d1d5db;
-
 margin-bottom:18px;
-
 }
 
-/* CONTACT */
+/* ===== CONTACT ===== */
 
 .contact{
-
 padding:120px 20px;
-
 text-align:center;
-
 background:#061124;
-
 }
 
 .contact h2{
-
-font-size:48px;
-
+font-size:46px;
 color:#00bfff;
-
 margin-bottom:18px;
-
 }
 
 .contact p{
-
-font-size:18px;
-
 color:#d1d5db;
-
 margin-bottom:34px;
-
 }
 
-/* FOOTER */
+/* ===== FOOTER ===== */
 
 footer{
-
-padding:28px;
-
+padding:26px;
 text-align:center;
-
 color:#94a3b8;
-
-border-top:
-1px solid rgba(255,255,255,.06);
-
 }
 
-/* WHATS */
+/* ===== WHATSAPP ===== */
 
 .whatsapp{
-
 position:fixed;
-
-right:22px;
-bottom:22px;
-
-width:68px;
-height:68px;
-
+right:20px;
+bottom:20px;
+width:66px;
+height:66px;
 border-radius:50%;
-
 background:#00bfff;
-
 display:flex;
-
 align-items:center;
 justify-content:center;
-
-font-size:32px;
-
+font-size:30px;
 color:#00111f;
-
 z-index:999;
-
-box-shadow:
-0 0 25px rgba(0,191,255,.35);
-
-transition:.3s;
-
 text-decoration:none;
-
 }
 
-.whatsapp:hover{
+/* ===== MINI MARKET ===== */
 
-transform:scale(1.08);
-
+.mini-market{
+position:fixed;
+left:12px;
+bottom:12px;
+z-index:9999;
+display:flex;
+flex-direction:column;
+gap:8px;
+padding:12px;
+min-width:165px;
+border-radius:16px;
+background:rgba(2,6,23,.84);
+backdrop-filter:blur(14px);
+border:1px solid rgba(0,191,255,.12);
+box-shadow:0 0 20px rgba(0,191,255,.10);
 }
 
-/* TABLET */
-
-@media(max-width:1100px){
-
-.services-grid{
-
-grid-template-columns:
-repeat(2, 320px);
-
+.market-item{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:12px;
 }
 
+.market-left{
+display:flex;
+flex-direction:column;
+gap:2px;
 }
 
-/* MOBILE */
+.market-name{
+font-size:11px;
+font-weight:700;
+color:#00bfff;
+letter-spacing:.5px;
+}
+
+.market-price{
+font-size:13px;
+font-weight:700;
+color:#fff;
+}
+
+.market-change{
+font-size:11px;
+font-weight:700;
+}
+
+.market-up{
+color:#00bfff;
+}
+
+.market-down{
+color:#ff5f5f;
+}
+
+/* ===== MOBILE ===== */
 
 @media(max-width:768px){
 
 header{
-
 display:grid;
-
-grid-template-columns:
-1fr auto;
-
+grid-template-columns:1fr auto;
 grid-template-areas:
-
 "logo logo"
 "weather menu";
-
-align-items:center;
-
 padding:16px 14px;
-
 gap:14px;
-
 }
 
-/* LOGO */
-
 .logo{
-
 grid-area:logo;
-
-display:flex;
-
-justify-content:center;
-
-width:100%;
-
 }
 
 .logo img{
-
 width:210px;
-
 }
 
-/* WEATHER */
-
 .weather-card{
-
 grid-area:weather;
-
 width:100%;
-
 padding:10px 12px;
-
-border-radius:18px;
-
 gap:10px;
-
+border-radius:18px;
 }
 
 .weather-icon{
-
-width:36px;
-height:36px;
-
+width:34px;
+height:34px;
 }
 
 #temperature{
-
 font-size:26px;
-
 }
 
 #city{
-
-font-size:14px;
-
+font-size:13px;
 }
 
 #date{
-
 font-size:10px;
-
 }
 
 #description{
-
 font-size:10px;
-
 }
 
 #clock{
-
 font-size:9px;
-
 }
 
-/* MENU */
-
 .menu-mobile{
-
 grid-area:menu;
-
-display:flex;
-
-justify-content:flex-end;
-
-position:relative;
-
 }
 
 .menu-toggle{
-
 display:flex;
-
 align-items:center;
 justify-content:center;
-
-width:46px;
-height:46px;
-
-font-size:20px;
-
 }
 
 #mobile-menu{
-
 position:absolute;
-
 top:58px;
-
 right:0;
-
 width:220px;
-
-background:
-rgba(2,6,23,.98);
-
-border:
-1px solid rgba(0,191,255,.15);
-
+background:rgba(2,6,23,.98);
 border-radius:18px;
-
 padding:18px;
-
 display:none;
-
 flex-direction:column;
-
 gap:18px;
-
-box-shadow:
-0 0 25px rgba(0,191,255,.12);
-
-backdrop-filter:blur(14px);
-
-z-index:999;
-
 }
 
 #mobile-menu.active{
-
 display:flex;
-
 }
-
-#mobile-menu a{
-
-font-size:16px;
-
-}
-
-/* HERO */
 
 .hero{
-
-padding:
-300px 20px 120px;
-
+padding:330px 20px 120px;
 }
 
 .hero h1{
-
 font-size:38px;
-
-line-height:1.2;
-
 }
 
 .hero p{
-
 font-size:16px;
-
-line-height:1.7;
-
 }
-
-/* BUTTONS */
-
-.btn{
-
-width:100%;
-
-}
-
-/* SERVICES */
-
-.services-grid{
-
-grid-template-columns:1fr;
-
-}
-
-.service-card{
-
-width:100%;
-
-}
-
-/* ABOUT */
 
 .about{
-
 grid-template-columns:1fr;
-
 padding:80px 20px;
-
 }
-
-/* TITLES */
 
 .section-title h2,
 .about-content h2,
 .contact h2{
-
 font-size:32px;
+}
 
+.mini-market{
+left:10px;
+bottom:10px;
+padding:10px;
+min-width:145px;
+}
+
+.market-price{
+font-size:12px;
+}
+
+.market-change{
+font-size:10px;
+}
+
+}
+
+/* ===== EXTRA SMALL ===== */
+
+@media(max-width:420px){
+
+.mini-market{
+transform:scale(.92);
+transform-origin:bottom left;
 }
 
 }
@@ -1107,15 +617,15 @@ SARANDI-PR
 </div>
 
 <div id="date">
-Carregando data...
+Carregando...
 </div>
 
 <div id="description">
-Carregando clima...
+Clima...
 </div>
 
 <div id="clock">
-Horário de Brasília --:--
+--:--
 </div>
 
 </div>
@@ -1123,78 +633,97 @@ Horário de Brasília --:--
 </div>
 
 <div class="logo">
-
-<img
-src="logo 2026.png"
-alt="logo">
-
+<img src="logo 2026.png" alt="logo">
 </div>
 
 <div class="menu-mobile">
 
 <button class="menu-toggle" id="menu-toggle">
-
 <i class="fa-solid fa-bars"></i>
-
 </button>
 
 <nav id="mobile-menu">
-
 <a href="#">INÍCIO</a>
 <a href="#services">SERVIÇOS</a>
 <a href="#about">SOBRE</a>
 <a href="#contact">CONTATO</a>
-
 </nav>
 
 </div>
 
 </header>
 
+<!-- ===== MINI MARKET ===== -->
+
+<div class="mini-market">
+
+<div class="market-item">
+
+<div class="market-left">
+<span class="market-name">BTC</span>
+<span class="market-price" id="btc-price">...</span>
+</div>
+
+<span class="market-change" id="btc-change">...</span>
+
+</div>
+
+<div class="market-item">
+
+<div class="market-left">
+<span class="market-name">USD</span>
+<span class="market-price" id="usd-price">...</span>
+</div>
+
+<span class="market-change" id="usd-change">...</span>
+
+</div>
+
+<div class="market-item">
+
+<div class="market-left">
+<span class="market-name">IBOV</span>
+<span class="market-price" id="ibov-price">...</span>
+</div>
+
+<span class="market-change" id="ibov-change">...</span>
+
+</div>
+
+</div>
+
+<!-- ===== HERO ===== -->
+
 <section class="hero">
 
 <video autoplay muted loop playsinline>
-
-<source
-src="video.mp4"
-type="video/mp4">
-
+<source src="video.mp4" type="video/mp4">
 </video>
 
 <div class="hero-content">
 
 <h1>
-
 Assistência Técnica em
-<span>
-Informática e Celulares
-</span>
-
+<span>Informática e Celulares</span>
 </h1>
 
 <p>
-
-Especialistas em manutenção
-de computadores, notebooks
-e celulares com atendimento rápido,
-profissional e suporte especializado.
-
+Especialistas em manutenção de computadores,
+notebooks e celulares com atendimento rápido
+e profissional.
 </p>
 
 <div class="buttons">
 
-<a
-href="https://wa.me/5544999999806"
+<a href="https://wa.me/5544999999806"
 class="btn btn-primary">
 
 <i class="fa-brands fa-whatsapp"></i>
-
-Chamar no WhatsApp
+WhatsApp
 
 </a>
 
-<a
-href="#services"
+<a href="#services"
 class="btn btn-secondary">
 
 Ver Serviços
@@ -1207,15 +736,13 @@ Ver Serviços
 
 </section>
 
-<section
-class="services"
-id="services">
+<!-- ===== SERVICES ===== -->
+
+<section class="services" id="services">
 
 <div class="section-title">
 
-<h2>
-Nossos Serviços
-</h2>
+<h2>Nossos Serviços</h2>
 
 <p>
 Atendimento rápido e especializado
@@ -1226,78 +753,54 @@ Atendimento rápido e especializado
 <div class="services-grid">
 
 <div class="service-card">
-
 <h3>Formatação</h3>
-
 <p>
-Instalação completa e otimização
-do sistema operacional.
+Instalação e otimização completa do sistema operacional.
 </p>
-
 </div>
 
 <div class="service-card">
-
-<h3>Troca de Tela e Bateria</h3>
-
+<h3>Troca de Tela</h3>
 <p>
-Troca de telas e baterias de celulares
-com serviço rápido no mesmo dia.
+Troca rápida de telas e baterias.
 </p>
-
 </div>
 
 <div class="service-card">
-
 <h3>Upgrade SSD</h3>
-
 <p>
-Mais velocidade e desempenho
-para computadores e notebooks.
+Mais velocidade para notebooks e PCs.
 </p>
-
 </div>
 
 <div class="service-card">
-
 <h3>Limpeza Interna</h3>
-
 <p>
-Limpeza preventiva profissional
-e manutenção especializada.
+Manutenção preventiva profissional.
 </p>
-
 </div>
 
 <div class="service-card">
-
 <h3>Remoção de Vírus</h3>
-
 <p>
-Eliminação de vírus, malwares
-e otimização completa.
+Eliminação de vírus e otimização completa.
 </p>
-
 </div>
 
 <div class="service-card">
-
 <h3>PC Gamer</h3>
-
 <p>
-Montagem completa de computadores gamer
-e organização profissional.
+Montagem e upgrades gamer.
 </p>
-
 </div>
 
 </div>
 
 </section>
 
-<section
-class="about"
-id="about">
+<!-- ===== ABOUT ===== -->
+
+<section class="about" id="about">
 
 <div class="about-image">
 
@@ -1309,56 +812,60 @@ alt="assistencia">
 
 <div class="about-content">
 
-<h2>
-Sobre Nós
-</h2>
+<h2>Sobre Nós</h2>
 
 <p>
-
-A Império Manutenções oferece
-assistência técnica especializada
-em informática e celulares.
-
+A Império Manutenções oferece assistência
+técnica especializada em informática e celulares.
 </p>
 
 <p>
+Trabalhamos com manutenção, upgrades,
+reparos avançados e suporte profissional.
+</p>
 
-Trabalhamos com manutenção,
-upgrades, reparos avançados
-e suporte especializado.
-
+<p>
+Atendimento rápido, transparente e com foco
+em qualidade e desempenho.
 </p>
 
 </div>
 
 </section>
 
-<section
-class="contact"
-id="contact">
+<!-- ===== CONTACT ===== -->
 
-<h2>
-Entre em Contato
-</h2>
+<section class="contact" id="contact">
+
+<h2>Entre em Contato</h2>
 
 <p>
-
-Solicite agora mesmo
-seu orçamento pelo WhatsApp.
-
+Solicite agora mesmo seu orçamento.
 </p>
 
-<a
-href="https://wa.me/5544999999806"
+<div class="buttons">
+
+<a href="https://wa.me/5544999999806"
 class="btn btn-primary">
 
 <i class="fa-brands fa-whatsapp"></i>
-
-Falar no WhatsApp
+WhatsApp
 
 </a>
 
+<a href="tel:+5544999999806"
+class="btn btn-secondary">
+
+<i class="fa-solid fa-phone"></i>
+Ligar Agora
+
+</a>
+
+</div>
+
 </section>
+
+<!-- ===== FOOTER ===== -->
 
 <footer>
 
@@ -1366,8 +873,9 @@ Falar no WhatsApp
 
 </footer>
 
-<a
-class="whatsapp"
+<!-- ===== WHATSAPP ===== -->
+
+<a class="whatsapp"
 href="https://wa.me/5544999999806">
 
 <i class="fa-brands fa-whatsapp"></i>
@@ -1376,71 +884,47 @@ href="https://wa.me/5544999999806">
 
 <script>
 
+/* ===== MENU MOBILE ===== */
+
 const menuToggle =
 document.getElementById('menu-toggle');
 
 const mobileMenu =
 document.getElementById('mobile-menu');
 
-menuToggle.addEventListener(
-'click',
-()=>{
+menuToggle.addEventListener('click',()=>{
 
 mobileMenu.classList.toggle('active');
 
-}
-);
+});
+
+/* ===== WEATHER ===== */
 
 const API_KEY =
 'fc1eff14c9dd0ecd8b690cb8cb3bc370';
-
-const CITY =
-'Sarandi,BR';
 
 async function loadWeather(){
 
 try{
 
-const response =
-await fetch(
-`https://api.openweathermap.org/data/2.5/weather?q=${CITY}&appid=${API_KEY}&units=metric&lang=pt_br`
+const response = await fetch(
+`https://api.openweathermap.org/data/2.5/weather?q=Sarandi,BR&appid=${API_KEY}&units=metric&lang=pt_br`
 );
 
-const data =
-await response.json();
+const data = await response.json();
 
-const temp =
-Math.round(data.main.temp);
+document.getElementById('temperature').innerText =
+Math.round(data.main.temp) + '°C';
 
-const description =
+document.getElementById('description').innerText =
 data.weather[0].description;
 
-const icon =
-data.weather[0].icon;
+document.getElementById('weather-icon').src =
+`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
 
-document
-.getElementById('temperature')
-.innerText =
-`${temp}°C`;
+}catch(err){
 
-document
-.getElementById('description')
-.innerText =
-description;
-
-document
-.getElementById('weather-icon')
-.src =
-`https://openweathermap.org/img/wn/${icon}@2x.png`;
-
-}
-
-catch(error){
-
-document
-.getElementById('description')
-.innerText =
-'Clima indisponível';
+console.log(err);
 
 }
 
@@ -1448,70 +932,127 @@ document
 
 function updateDate(){
 
-const now =
-new Date();
+const now = new Date();
 
-const formattedDate =
-now.toLocaleDateString(
-'pt-BR',
-{
+document.getElementById('date').innerText =
+now.toLocaleDateString('pt-BR',{
 weekday:'long',
 day:'numeric',
 month:'long'
-}
-);
-
-const finalDate =
-formattedDate.charAt(0)
-.toUpperCase()
-+
-formattedDate.slice(1);
-
-document
-.getElementById('date')
-.innerText =
-finalDate;
+});
 
 }
 
 function updateClock(){
 
-const now =
-new Date();
+document.getElementById('clock').innerText =
+new Date().toLocaleTimeString('pt-BR');
 
-const time =
-now.toLocaleTimeString(
-'pt-BR',
-{
-timeZone:'America/Sao_Paulo',
-hour:'2-digit',
-minute:'2-digit',
-second:'2-digit'
 }
+
+/* ===== MARKET ===== */
+
+function setVariation(element,value){
+
+element.classList.remove(
+'market-up',
+'market-down'
 );
 
-document
-.getElementById('clock')
-.innerText =
-`Horário de Brasília • ${time}`;
+if(value >= 0){
+
+element.classList.add('market-up');
+
+element.innerText =
+'+' + value.toFixed(2) + '%';
+
+}else{
+
+element.classList.add('market-down');
+
+element.innerText =
+value.toFixed(2) + '%';
 
 }
+
+}
+
+async function loadMiniMarket(){
+
+try{
+
+/* BTC */
+
+const btcResponse = await fetch(
+'https://api.binance.com/api/v3/ticker/24hr?symbol=BTCBRL'
+);
+
+const btcData = await btcResponse.json();
+
+document.getElementById('btc-price').innerText =
+'R$ ' +
+Math.round(Number(btcData.lastPrice)/1000) +
+'k';
+
+setVariation(
+document.getElementById('btc-change'),
+Number(btcData.priceChangePercent)
+);
+
+/* USD */
+
+const usdResponse = await fetch(
+'https://economia.awesomeapi.com.br/json/last/USD-BRL'
+);
+
+const usdData = await usdResponse.json();
+
+document.getElementById('usd-price').innerText =
+'R$ ' +
+Number(usdData.USDBRL.bid).toFixed(2);
+
+setVariation(
+document.getElementById('usd-change'),
+Number(usdData.USDBRL.pctChange)
+);
+
+/* IBOV */
+
+const ibovResponse = await fetch(
+'https://api.hgbrasil.com/finance?format=json-cors&key=demo'
+);
+
+const ibovData = await ibovResponse.json();
+
+const ibov =
+ibovData.results.stocks.IBOVESPA;
+
+document.getElementById('ibov-price').innerText =
+Math.round(ibov.points/1000) + 'k';
+
+setVariation(
+document.getElementById('ibov-change'),
+Number(ibov.variation)
+);
+
+}catch(err){
+
+console.log(err);
+
+}
+
+}
+
+/* ===== INIT ===== */
 
 loadWeather();
-
 updateDate();
-
 updateClock();
+loadMiniMarket();
 
-setInterval(
-updateClock,
-1000
-);
-
-setInterval(
-loadWeather,
-600000
-);
+setInterval(updateClock,1000);
+setInterval(loadWeather,600000);
+setInterval(loadMiniMarket,30000);
 
 </script>
 
