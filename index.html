@@ -679,16 +679,7 @@ Clima...
 
 </div>
 
-<div class="market-item">
 
-<div class="market-left">
-<span class="market-name">IBOV</span>
-<span class="market-price" id="ibov-price">...</span>
-</div>
-
-<span class="market-change" id="ibov-change">...</span>
-
-</div>
 
 </div>
 
@@ -1016,24 +1007,6 @@ document.getElementById('usd-change'),
 Number(usdData.USDBRL.pctChange)
 );
 
-/* IBOV */
-
-const ibovResponse = await fetch(
-'https://api.hgbrasil.com/finance?format=json-cors&key=demo'
-);
-
-const ibovData = await ibovResponse.json();
-
-const ibov =
-ibovData.results.stocks.IBOVESPA;
-
-document.getElementById('ibov-price').innerText =
-Math.round(ibov.points/1000) + 'k';
-
-setVariation(
-document.getElementById('ibov-change'),
-Number(ibov.variation)
-);
 
 }catch(err){
 
