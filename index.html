@@ -66,7 +66,8 @@ padding:18px 40px;
 
 display:grid;
 
-grid-template-columns:1fr auto 1fr;
+grid-template-columns:
+1fr auto 1fr;
 
 align-items:center;
 
@@ -74,7 +75,8 @@ background:rgba(0,0,0,.65);
 
 backdrop-filter:blur(14px);
 
-border-bottom:1px solid rgba(0,191,255,.08);
+border-bottom:
+1px solid rgba(0,191,255,.08);
 
 }
 
@@ -94,13 +96,15 @@ width:450px;
 
 border-radius:24px;
 
-background:linear-gradient(
+background:
+linear-gradient(
 135deg,
 rgba(0,20,50,.95),
 rgba(0,8,25,.95)
 );
 
-border:1px solid rgba(0,191,255,.12);
+border:
+1px solid rgba(0,191,255,.12);
 
 box-shadow:
 0 0 25px rgba(0,191,255,.08);
@@ -201,6 +205,8 @@ display:flex;
 
 justify-content:flex-end;
 
+position:relative;
+
 }
 
 .menu-toggle{
@@ -216,13 +222,14 @@ outline:none;
 
 background:rgba(0,191,255,.12);
 
-border:1px solid rgba(0,191,255,.20);
+border:
+1px solid rgba(0,191,255,.20);
 
 border-radius:14px;
 
 color:#00bfff;
 
-font-size:24px;
+font-size:22px;
 
 cursor:pointer;
 
@@ -311,7 +318,8 @@ justify-content:center;
 
 overflow:hidden;
 
-padding:220px 20px 120px;
+padding:
+220px 20px 120px;
 
 }
 
@@ -343,8 +351,8 @@ height:100%;
 background:
 linear-gradient(
 180deg,
-rgba(0,0,0,.78),
-rgba(1,6,20,.92)
+rgba(0,0,0,.80),
+rgba(1,6,20,.94)
 );
 
 z-index:-2;
@@ -618,7 +626,8 @@ rgba(10,20,40,.96),
 rgba(5,10,25,.96)
 );
 
-border:1px solid rgba(0,191,255,.12);
+border:
+1px solid rgba(0,191,255,.12);
 
 backdrop-filter:blur(10px);
 
@@ -684,7 +693,8 @@ width:100%;
 
 border-radius:24px;
 
-border:1px solid rgba(0,191,255,.08);
+border:
+1px solid rgba(0,191,255,.08);
 
 }
 
@@ -752,7 +762,8 @@ text-align:center;
 
 color:#94a3b8;
 
-border-top:1px solid rgba(255,255,255,.06);
+border-top:
+1px solid rgba(255,255,255,.06);
 
 }
 
@@ -798,21 +809,7 @@ transform:scale(1.08);
 
 }
 
-/* RESPONSIVO */
-
-@media(max-width:1450px){
-
-header{
-
-grid-template-columns:1fr;
-
-justify-items:center;
-
-gap:24px;
-
-}
-
-}
+/* TABLET */
 
 @media(max-width:1100px){
 
@@ -825,45 +822,43 @@ repeat(2, 320px);
 
 }
 
+/* MOBILE */
+
 @media(max-width:768px){
 
 header{
 
-display:flex;
+display:grid;
 
-flex-direction:column;
+grid-template-columns:
+1fr auto;
+
+grid-template-areas:
+
+"logo logo"
+"weather menu";
 
 align-items:center;
 
-gap:18px;
+padding:16px 14px;
 
-padding:18px 14px;
-
-}
-
-/* WEATHER */
-
-.weather-card{
-
-width:100%;
-
-padding:14px;
-
-}
-
-#temperature{
-
-font-size:34px;
-
-}
-
-#city{
-
-font-size:16px;
+gap:14px;
 
 }
 
 /* LOGO */
+
+.logo{
+
+grid-area:logo;
+
+display:flex;
+
+justify-content:center;
+
+width:100%;
+
+}
 
 .logo img{
 
@@ -871,11 +866,64 @@ width:210px;
 
 }
 
+/* WEATHER */
+
+.weather-card{
+
+grid-area:weather;
+
+width:100%;
+
+padding:10px 12px;
+
+border-radius:18px;
+
+gap:10px;
+
+}
+
+.weather-icon{
+
+width:36px;
+height:36px;
+
+}
+
+#temperature{
+
+font-size:26px;
+
+}
+
+#city{
+
+font-size:14px;
+
+}
+
+#date{
+
+font-size:10px;
+
+}
+
+#description{
+
+font-size:10px;
+
+}
+
+#clock{
+
+font-size:9px;
+
+}
+
 /* MENU */
 
 .menu-mobile{
 
-width:100%;
+grid-area:menu;
 
 display:flex;
 
@@ -892,21 +940,28 @@ display:flex;
 align-items:center;
 justify-content:center;
 
+width:46px;
+height:46px;
+
+font-size:20px;
+
 }
 
 #mobile-menu{
 
 position:absolute;
 
-top:65px;
+top:58px;
 
 right:0;
 
 width:220px;
 
-background:rgba(2,6,23,.98);
+background:
+rgba(2,6,23,.98);
 
-border:1px solid rgba(0,191,255,.15);
+border:
+1px solid rgba(0,191,255,.15);
 
 border-radius:18px;
 
@@ -933,11 +988,18 @@ display:flex;
 
 }
 
+#mobile-menu a{
+
+font-size:16px;
+
+}
+
 /* HERO */
 
 .hero{
 
-padding:420px 20px 120px;
+padding:
+300px 20px 120px;
 
 }
 
@@ -1000,8 +1062,6 @@ font-size:32px;
 }
 
 }
-
-
 
 </style>
 
@@ -1067,21 +1127,10 @@ alt="logo">
 
 <nav id="mobile-menu">
 
-<a href="#">
-INÍCIO
-</a>
-
-<a href="#services">
-SERVIÇOS
-</a>
-
-<a href="#about">
-SOBRE
-</a>
-
-<a href="#contact">
-CONTATO
-</a>
+<a href="#">INÍCIO</a>
+<a href="#services">SERVIÇOS</a>
+<a href="#about">SOBRE</a>
+<a href="#contact">CONTATO</a>
 
 </nav>
 
@@ -1112,8 +1161,9 @@ Informática e Celulares
 
 <p>
 
-Especialistas em manutenção de computadores,
-notebooks e celulares com atendimento rápido,
+Especialistas em manutenção
+de computadores, notebooks
+e celulares com atendimento rápido,
 profissional e suporte especializado.
 
 </p>
@@ -1175,9 +1225,7 @@ do sistema operacional.
 
 <div class="service-card">
 
-<h3>
-Troca de Tela e Bateria
-</h3>
+<h3>Troca de Tela e Bateria</h3>
 
 <p>
 Troca de telas e baterias de celulares
@@ -1188,9 +1236,7 @@ com serviço rápido no mesmo dia.
 
 <div class="service-card">
 
-<h3>
-Upgrade SSD
-</h3>
+<h3>Upgrade SSD</h3>
 
 <p>
 Mais velocidade e desempenho
@@ -1201,9 +1247,7 @@ para computadores e notebooks.
 
 <div class="service-card">
 
-<h3>
-Limpeza Interna
-</h3>
+<h3>Limpeza Interna</h3>
 
 <p>
 Limpeza preventiva profissional
@@ -1214,9 +1258,7 @@ e manutenção especializada.
 
 <div class="service-card">
 
-<h3>
-Remoção de Vírus
-</h3>
+<h3>Remoção de Vírus</h3>
 
 <p>
 Eliminação de vírus, malwares
@@ -1227,9 +1269,7 @@ e otimização completa.
 
 <div class="service-card">
 
-<h3>
-PC Gamer
-</h3>
+<h3>PC Gamer</h3>
 
 <p>
 Montagem completa de computadores gamer
@@ -1322,6 +1362,21 @@ href="https://wa.me/5544999999806">
 </a>
 
 <script>
+
+const menuToggle =
+document.getElementById('menu-toggle');
+
+const mobileMenu =
+document.getElementById('mobile-menu');
+
+menuToggle.addEventListener(
+'click',
+()=>{
+
+mobileMenu.classList.toggle('active');
+
+}
+);
 
 const API_KEY =
 'fc1eff14c9dd0ecd8b690cb8cb3bc370';
@@ -1443,21 +1498,6 @@ updateClock,
 setInterval(
 loadWeather,
 600000
-);
-
-const menuToggle =
-document.getElementById('menu-toggle');
-
-const mobileMenu =
-document.getElementById('mobile-menu');
-
-menuToggle.addEventListener(
-'click',
-()=>{
-
-mobileMenu.classList.toggle('active');
-
-}
 );
 
 </script>
