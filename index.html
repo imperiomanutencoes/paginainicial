@@ -11,6 +11,7 @@
 <link rel="icon" type="image/png" href="logo.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet"
@@ -32,7 +33,7 @@ scroll-behavior:smooth;
 
 body{
 font-family:'Montserrat',sans-serif;
-background:#030712;
+background:#020617;
 color:#fff;
 overflow-x:hidden;
 }
@@ -49,9 +50,9 @@ padding:18px 40px;
 display:grid;
 grid-template-columns:1fr auto 1fr;
 align-items:center;
-background:rgba(0,0,0,.65);
+background:rgba(0,0,0,.60);
 backdrop-filter:blur(14px);
-border-bottom:1px solid rgba(0,191,255,.08);
+border-bottom:1px solid rgba(0,191,255,.10);
 }
 
 /* ===== WEATHER ===== */
@@ -68,12 +69,13 @@ background:linear-gradient(
 rgba(0,20,50,.95),
 rgba(0,8,25,.95)
 );
-border:1px solid rgba(0,191,255,.12);
+border:1px solid rgba(0,191,255,.18);
+box-shadow:0 0 20px rgba(0,191,255,.08);
 }
 
 .weather-icon{
-width:48px;
-height:48px;
+width:52px;
+height:52px;
 }
 
 .weather-info{
@@ -84,7 +86,7 @@ flex-direction:column;
 .weather-top{
 display:flex;
 align-items:center;
-gap:8px;
+gap:10px;
 }
 
 #temperature{
@@ -96,12 +98,13 @@ line-height:1;
 #city{
 font-size:18px;
 font-weight:700;
-margin-top:5px;
+margin-top:4px;
 }
 
 #date{
 font-size:13px;
 color:#dbeafe;
+margin-top:2px;
 }
 
 #description{
@@ -109,11 +112,13 @@ font-size:12px;
 color:#00bfff;
 font-weight:600;
 text-transform:capitalize;
+margin-top:3px;
 }
 
 #clock{
-font-size:10px;
+font-size:11px;
 color:#94a3b8;
+margin-top:2px;
 }
 
 /* ===== LOGO ===== */
@@ -125,43 +130,26 @@ justify-content:center;
 
 .logo img{
 width:320px;
+filter:drop-shadow(0 0 18px rgba(0,191,255,.30));
 }
 
 /* ===== MENU ===== */
 
-.menu-mobile{
+.menu{
 display:flex;
 justify-content:flex-end;
-position:relative;
-}
-
-.menu-toggle{
-display:none;
-width:50px;
-height:50px;
-border:none;
-background:rgba(0,191,255,.12);
-border:1px solid rgba(0,191,255,.18);
-border-radius:14px;
-color:#00bfff;
-font-size:20px;
-cursor:pointer;
-}
-
-#mobile-menu{
-display:flex;
 gap:28px;
 }
 
-#mobile-menu a{
+.menu a{
 color:#fff;
 font-size:14px;
-font-weight:600;
+font-weight:700;
 text-decoration:none;
 transition:.3s;
 }
 
-#mobile-menu a:hover{
+.menu a:hover{
 color:#00bfff;
 }
 
@@ -194,7 +182,7 @@ width:100%;
 height:100%;
 background:linear-gradient(
 180deg,
-rgba(0,0,0,.82),
+rgba(0,0,0,.80),
 rgba(1,6,20,.95)
 );
 z-index:-1;
@@ -251,6 +239,7 @@ color:#00111f;
 
 .btn-primary:hover{
 transform:translateY(-4px);
+box-shadow:0 0 25px rgba(0,191,255,.30);
 }
 
 .btn-secondary{
@@ -263,62 +252,178 @@ background:#00bfff;
 color:#00111f;
 }
 
+/* ===== MARKET ===== */
+
+.market-box{
+display:flex;
+justify-content:flex-end;
+gap:12px;
+}
+
+.market-card{
+display:flex;
+align-items:center;
+gap:12px;
+padding:14px 18px;
+border-radius:20px;
+background:linear-gradient(
+135deg,
+rgba(0,20,50,.95),
+rgba(0,8,25,.95)
+);
+border:1px solid rgba(0,191,255,.18);
+min-width:160px;
+}
+
+.market-icon{
+width:42px;
+height:42px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:18px;
+font-weight:700;
+background:#00bfff;
+color:#00111f;
+}
+
+.market-info{
+display:flex;
+flex-direction:column;
+}
+
+.market-title{
+font-size:11px;
+font-weight:700;
+color:#00bfff;
+}
+
+.market-price{
+font-size:20px;
+font-weight:800;
+}
+
+.market-change{
+font-size:12px;
+font-weight:700;
+}
+
+.up{
+color:#00ffae;
+}
+
+.down{
+color:#ff5f5f;
+}
+
 /* ===== SERVICES ===== */
 
 .services{
-padding:120px 30px;
-background:#040b18;
+position:relative;
+padding:130px 30px;
+background:
+linear-gradient(
+rgba(0,5,15,.88),
+rgba(0,5,15,.96)
+),
+url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop')
+center/cover no-repeat;
+overflow:hidden;
 }
 
 .section-title{
 text-align:center;
-margin-bottom:60px;
+margin-bottom:70px;
 }
 
 .section-title h2{
-font-size:46px;
+font-size:72px;
+font-weight:800;
 color:#00bfff;
-margin-bottom:12px;
+margin-bottom:14px;
 }
 
 .section-title p{
-color:#cbd5e1;
+font-size:20px;
+color:#dbeafe;
 }
 
 .services-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:28px;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
 max-width:1200px;
 margin:auto;
 }
 
 .service-card{
-padding:34px;
-border-radius:24px;
-background:linear-gradient(
+position:relative;
+padding:38px 34px;
+border-radius:28px;
+background:
+linear-gradient(
 180deg,
-rgba(10,20,40,.96),
-rgba(5,10,25,.96)
+rgba(4,15,35,.95),
+rgba(1,8,20,.97)
 );
-border:1px solid rgba(0,191,255,.12);
-transition:.3s;
+border:1px solid rgba(0,191,255,.18);
+overflow:hidden;
+transition:.35s;
 }
 
 .service-card:hover{
-transform:translateY(-6px);
+transform:translateY(-8px);
 border-color:#00bfff;
+box-shadow:0 0 30px rgba(0,191,255,.18);
+}
+
+.service-icon{
+width:72px;
+height:72px;
+border-radius:18px;
+display:flex;
+align-items:center;
+justify-content:center;
+margin-bottom:24px;
+font-size:30px;
+color:#00bfff;
+background:
+linear-gradient(
+180deg,
+rgba(0,191,255,.12),
+rgba(0,191,255,.04)
+);
+border:1px solid rgba(0,191,255,.14);
 }
 
 .service-card h3{
-font-size:16px;
+font-size:26px;
+font-weight:800;
+margin-bottom:18px;
 color:#00bfff;
-margin-bottom:12px;
 }
 
 .service-card p{
-line-height:1.8;
-color:#d1d5db;
+font-size:16px;
+line-height:1.9;
+color:#dbeafe;
+}
+
+.service-card strong{
+color:#00bfff;
+}
+
+.badge{
+position:absolute;
+top:18px;
+right:18px;
+padding:8px 14px;
+border-radius:999px;
+font-size:11px;
+font-weight:800;
+background:#00bfff;
+color:#00111f;
 }
 
 /* ===== ABOUT ===== */
@@ -347,6 +452,7 @@ margin-bottom:24px;
 line-height:1.9;
 color:#d1d5db;
 margin-bottom:18px;
+font-size:17px;
 }
 
 /* ===== CONTACT ===== */
@@ -366,6 +472,7 @@ margin-bottom:18px;
 .contact p{
 color:#d1d5db;
 margin-bottom:34px;
+font-size:18px;
 }
 
 /* ===== FOOTER ===== */
@@ -393,195 +500,53 @@ font-size:30px;
 color:#00111f;
 z-index:999;
 text-decoration:none;
-}
-
-/* ===== MINI MARKET ===== */
-
-.mini-market{
-position:fixed;
-left:12px;
-bottom:12px;
-z-index:9999;
-display:flex;
-flex-direction:column;
-gap:8px;
-padding:12px;
-min-width:165px;
-border-radius:16px;
-background:rgba(2,6,23,.84);
-backdrop-filter:blur(14px);
-border:1px solid rgba(0,191,255,.12);
-box-shadow:0 0 20px rgba(0,191,255,.10);
-}
-
-.market-item{
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:12px;
-}
-
-.market-left{
-display:flex;
-flex-direction:column;
-gap:2px;
-}
-
-.market-name{
-font-size:11px;
-font-weight:700;
-color:#00bfff;
-letter-spacing:.5px;
-}
-
-.market-price{
-font-size:13px;
-font-weight:700;
-color:#fff;
-}
-
-.market-change{
-font-size:11px;
-font-weight:700;
-}
-
-.market-up{
-color:#00bfff;
-}
-
-.market-down{
-color:#ff5f5f;
+box-shadow:0 0 25px rgba(0,191,255,.35);
 }
 
 /* ===== MOBILE ===== */
 
-@media(max-width:768px){
+@media(max-width:1000px){
 
 header{
-display:grid;
-grid-template-columns:1fr auto;
-grid-template-areas:
-"logo logo"
-"weather menu";
-padding:16px 14px;
-gap:14px;
+grid-template-columns:1fr;
+gap:18px;
+padding:18px;
 }
 
-.logo{
-grid-area:logo;
-}
-
-.logo img{
-width:210px;
-}
-
-.weather-card{
-grid-area:weather;
+.weather-card,
+.market-box{
 width:100%;
-padding:10px 12px;
-gap:10px;
-border-radius:18px;
-}
-
-.weather-icon{
-width:34px;
-height:34px;
-}
-
-#temperature{
-font-size:26px;
-}
-
-#city{
-font-size:13px;
-}
-
-#date{
-font-size:10px;
-}
-
-#description{
-font-size:10px;
-}
-
-#clock{
-font-size:9px;
-}
-
-.menu-mobile{
-grid-area:menu;
-}
-
-.menu-toggle{
-display:flex;
-align-items:center;
 justify-content:center;
 }
 
-#mobile-menu{
-position:absolute;
-top:58px;
-right:0;
-width:220px;
-background:rgba(2,6,23,.98);
-border-radius:18px;
-padding:18px;
-display:none;
-flex-direction:column;
-gap:18px;
+.logo img{
+width:240px;
 }
 
-#mobile-menu.active{
-display:flex;
+.menu{
+justify-content:center;
+flex-wrap:wrap;
 }
 
-.hero{
-padding:330px 20px 120px;
+.services-grid{
+grid-template-columns:1fr;
 }
 
 .hero h1{
-font-size:28px;
+font-size:38px;
 }
 
 .hero p{
-font-size:12px;
+font-size:15px;
+}
+
+.section-title h2{
+font-size:42px;
 }
 
 .about{
 grid-template-columns:1fr;
 padding:80px 20px;
-}
-
-.section-title h2,
-.about-content h2,
-.contact h2{
-font-size:14px;
-}
-
-.mini-market{
-left:10px;
-bottom:10px;
-padding:10px;
-min-width:145px;
-}
-
-.market-price{
-font-size:12px;
-}
-
-.market-change{
-font-size:10px;
-}
-
-}
-
-/* ===== EXTRA SMALL ===== */
-
-@media(max-width:420px){
-
-.mini-market{
-transform:scale(.92);
-transform-origin:bottom left;
 }
 
 }
@@ -591,6 +556,8 @@ transform-origin:bottom left;
 </head>
 
 <body>
+
+<!-- ===== HEADER ===== -->
 
 <header>
 
@@ -636,52 +603,59 @@ Clima...
 <img src="logo 2026.png" alt="logo">
 </div>
 
-<div class="menu-mobile">
+<div class="market-box">
 
-<button class="menu-toggle" id="menu-toggle">
-<i class="fa-solid fa-bars"></i>
-</button>
+<div class="market-card">
 
-<nav id="mobile-menu">
-<a href="#">INÍCIO</a>
-<a href="#services">SERVIÇOS</a>
-<a href="#about">SOBRE</a>
-<a href="#contact">CONTATO</a>
-</nav>
+<div class="market-icon">
+₿
+</div>
+
+<div class="market-info">
+
+<span class="market-title">
+BTC / BRL
+</span>
+
+<span class="market-price" id="btc-price">
+...
+</span>
+
+<span class="market-change" id="btc-change">
+...
+</span>
+
+</div>
+
+</div>
+
+<div class="market-card">
+
+<div class="market-icon">
+$
+</div>
+
+<div class="market-info">
+
+<span class="market-title">
+USD / BRL
+</span>
+
+<span class="market-price" id="usd-price">
+...
+</span>
+
+<span class="market-change" id="usd-change">
+...
+</span>
+
+</div>
+
+</div>
 
 </div>
 
 </header>
-
-<!-- ===== MINI MARKET ===== -->
-
-<div class="mini-market">
-
-<div class="market-item">
-
-<div class="market-left">
-<span class="market-name">BTC</span>
-<span class="market-price" id="btc-price">...</span>
-</div>
-
-<span class="market-change" id="btc-change">...</span>
-
-</div>
-
-<div class="market-item">
-
-<div class="market-left">
-<span class="market-name">USD</span>
-<span class="market-price" id="usd-price">...</span>
-</div>
-
-<span class="market-change" id="usd-change">...</span>
-
-</div>
-
-
-
-</div>
 
 <!-- ===== HERO ===== -->
 
@@ -744,45 +718,97 @@ Atendimento rápido e especializado
 <div class="services-grid">
 
 <div class="service-card">
+
+<div class="service-icon">
+<i class="fa-solid fa-gears"></i>
+</div>
+
 <h3>Formatação</h3>
+
 <p>
-Instalação e otimização completa do sistema operacional.
+Instalação, otimização e atualização completa
+do sistema operacional.
 </p>
+
 </div>
 
 <div class="service-card">
+
+<div class="badge">
+MESMO DIA
+</div>
+
+<div class="service-icon">
+<i class="fa-solid fa-mobile-screen"></i>
+</div>
+
 <h3>Troca de Tela</h3>
+
 <p>
-Troca rápida de telas e baterias.
+Troca de telas e baterias com
+<strong>entrega rápida no mesmo dia.</strong>
 </p>
+
 </div>
 
 <div class="service-card">
+
+<div class="service-icon">
+<i class="fa-solid fa-hard-drive"></i>
+</div>
+
 <h3>Upgrade SSD</h3>
+
 <p>
-Mais velocidade para notebooks e PCs.
+Mais velocidade e desempenho
+para notebooks e computadores.
 </p>
+
 </div>
 
 <div class="service-card">
+
+<div class="service-icon">
+<i class="fa-solid fa-screwdriver-wrench"></i>
+</div>
+
 <h3>Limpeza Interna</h3>
+
 <p>
-Manutenção preventiva profissional.
+Manutenção preventiva profissional
+com limpeza completa do equipamento.
 </p>
+
 </div>
 
 <div class="service-card">
+
+<div class="service-icon">
+<i class="fa-solid fa-shield-virus"></i>
+</div>
+
 <h3>Remoção de Vírus</h3>
+
 <p>
-Eliminação de vírus e otimização completa.
+Eliminação de vírus, malwares
+e otimização completa do sistema.
 </p>
+
 </div>
 
 <div class="service-card">
+
+<div class="service-icon">
+<i class="fa-solid fa-gamepad"></i>
+</div>
+
 <h3>PC Gamer</h3>
+
 <p>
-Montagem e upgrades gamer.
+Montagem, upgrades e otimização
+para setups gamers.
 </p>
+
 </div>
 
 </div>
@@ -812,7 +838,7 @@ técnica especializada em informática e celulares.
 
 <p>
 Trabalhamos com manutenção, upgrades,
-reparos avançados e suporte profissional.
+instalação de softwares e drivers remotamente.
 </p>
 
 <p>
@@ -875,20 +901,6 @@ href="https://wa.me/5544999999806">
 
 <script>
 
-/* ===== MENU MOBILE ===== */
-
-const menuToggle =
-document.getElementById('menu-toggle');
-
-const mobileMenu =
-document.getElementById('mobile-menu');
-
-menuToggle.addEventListener('click',()=>{
-
-mobileMenu.classList.toggle('active');
-
-});
-
 /* ===== WEATHER ===== */
 
 const API_KEY =
@@ -946,20 +958,20 @@ new Date().toLocaleTimeString('pt-BR');
 function setVariation(element,value){
 
 element.classList.remove(
-'market-up',
-'market-down'
+'up',
+'down'
 );
 
 if(value >= 0){
 
-element.classList.add('market-up');
+element.classList.add('up');
 
 element.innerText =
 '+' + value.toFixed(2) + '%';
 
 }else{
 
-element.classList.add('market-down');
+element.classList.add('down');
 
 element.innerText =
 value.toFixed(2) + '%';
@@ -982,8 +994,7 @@ const btcData = await btcResponse.json();
 
 document.getElementById('btc-price').innerText =
 'R$ ' +
-Math.round(Number(btcData.lastPrice)/1000) +
-'k';
+Math.round(Number(btcData.lastPrice));
 
 setVariation(
 document.getElementById('btc-change'),
@@ -1006,7 +1017,6 @@ setVariation(
 document.getElementById('usd-change'),
 Number(usdData.USDBRL.pctChange)
 );
-
 
 }catch(err){
 
