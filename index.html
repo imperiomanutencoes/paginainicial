@@ -50,7 +50,7 @@ padding:18px 40px;
 display:grid;
 grid-template-columns:1fr auto 1fr;
 align-items:center;
-background:rgba(0,0,0,.60);
+background:rgba(0,0,0,.62);
 backdrop-filter:blur(14px);
 border-bottom:1px solid rgba(0,191,255,.10);
 }
@@ -74,8 +74,8 @@ box-shadow:0 0 20px rgba(0,191,255,.08);
 }
 
 .weather-icon{
-width:52px;
-height:52px;
+width:50px;
+height:50px;
 }
 
 .weather-info{
@@ -98,7 +98,6 @@ line-height:1;
 #city{
 font-size:18px;
 font-weight:700;
-margin-top:4px;
 }
 
 #date{
@@ -110,7 +109,7 @@ margin-top:2px;
 #description{
 font-size:12px;
 color:#00bfff;
-font-weight:600;
+font-weight:700;
 text-transform:capitalize;
 margin-top:3px;
 }
@@ -182,7 +181,7 @@ width:100%;
 height:100%;
 background:linear-gradient(
 180deg,
-rgba(0,0,0,.80),
+rgba(0,0,0,.82),
 rgba(1,6,20,.95)
 );
 z-index:-1;
@@ -239,7 +238,7 @@ color:#00111f;
 
 .btn-primary:hover{
 transform:translateY(-4px);
-box-shadow:0 0 25px rgba(0,191,255,.30);
+box-shadow:0 0 25px rgba(0,191,255,.35);
 }
 
 .btn-secondary{
@@ -254,63 +253,92 @@ color:#00111f;
 
 /* ===== MARKET ===== */
 
-.market-box{
+.mini-market{
+position:fixed;
+left:12px;
+bottom:12px;
+z-index:9999;
 display:flex;
-justify-content:flex-end;
-gap:12px;
+flex-direction:column;
+gap:10px;
+padding:12px;
+border-radius:20px;
+background:rgba(2,6,23,.88);
+backdrop-filter:blur(14px);
+border:1px solid rgba(0,191,255,.10);
+box-shadow:0 0 20px rgba(0,191,255,.08);
 }
 
 .market-card{
 display:flex;
 align-items:center;
-gap:12px;
-padding:14px 18px;
-border-radius:20px;
+justify-content:space-between;
+gap:18px;
+padding:12px 14px;
+border-radius:18px;
 background:linear-gradient(
 135deg,
-rgba(0,20,50,.95),
-rgba(0,8,25,.95)
+rgba(0,15,40,.95),
+rgba(0,5,18,.96)
 );
-border:1px solid rgba(0,191,255,.18);
-min-width:160px;
+border:1px solid rgba(0,191,255,.12);
+min-width:230px;
+}
+
+.market-left{
+display:flex;
+align-items:center;
+gap:12px;
 }
 
 .market-icon{
-width:42px;
-height:42px;
+width:40px;
+height:40px;
 border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
 font-size:18px;
-font-weight:700;
-background:#00bfff;
-color:#00111f;
+font-weight:800;
+color:#fff;
+}
+
+.btc-icon{
+background:linear-gradient(
+135deg,
+#ffb300,
+#ff8800
+);
+box-shadow:0 0 12px rgba(255,166,0,.35);
+}
+
+.usd-icon{
+background:linear-gradient(
+135deg,
+#00bfff,
+#2563eb
+);
+box-shadow:0 0 12px rgba(0,191,255,.35);
 }
 
 .market-info{
 display:flex;
 flex-direction:column;
-}
-
-.market-title{
-font-size:11px;
-font-weight:700;
-color:#00bfff;
+gap:2px;
 }
 
 .market-price{
-font-size:20px;
+font-size:16px;
 font-weight:800;
 }
 
 .market-change{
-font-size:12px;
-font-weight:700;
+font-size:14px;
+font-weight:800;
 }
 
 .up{
-color:#00ffae;
+color:#00d084;
 }
 
 .down{
@@ -329,7 +357,6 @@ rgba(0,5,15,.96)
 ),
 url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop')
 center/cover no-repeat;
-overflow:hidden;
 }
 
 .section-title{
@@ -338,7 +365,7 @@ margin-bottom:70px;
 }
 
 .section-title h2{
-font-size:72px;
+font-size:70px;
 font-weight:800;
 color:#00bfff;
 margin-bottom:14px;
@@ -360,16 +387,15 @@ margin:auto;
 .service-card{
 position:relative;
 padding:38px 34px;
-border-radius:28px;
-background:
-linear-gradient(
+border-radius:30px;
+background:linear-gradient(
 180deg,
-rgba(4,15,35,.95),
-rgba(1,8,20,.97)
+rgba(3,15,35,.96),
+rgba(1,8,20,.98)
 );
 border:1px solid rgba(0,191,255,.18);
-overflow:hidden;
 transition:.35s;
+overflow:hidden;
 }
 
 .service-card:hover{
@@ -379,17 +405,16 @@ box-shadow:0 0 30px rgba(0,191,255,.18);
 }
 
 .service-icon{
-width:72px;
-height:72px;
-border-radius:18px;
+width:74px;
+height:74px;
+border-radius:20px;
 display:flex;
 align-items:center;
 justify-content:center;
 margin-bottom:24px;
 font-size:30px;
 color:#00bfff;
-background:
-linear-gradient(
+background:linear-gradient(
 180deg,
 rgba(0,191,255,.12),
 rgba(0,191,255,.04)
@@ -398,7 +423,7 @@ border:1px solid rgba(0,191,255,.14);
 }
 
 .service-card h3{
-font-size:26px;
+font-size:28px;
 font-weight:800;
 margin-bottom:18px;
 color:#00bfff;
@@ -513,10 +538,8 @@ gap:18px;
 padding:18px;
 }
 
-.weather-card,
-.market-box{
+.weather-card{
 width:100%;
-justify-content:center;
 }
 
 .logo img{
@@ -547,6 +570,11 @@ font-size:42px;
 .about{
 grid-template-columns:1fr;
 padding:80px 20px;
+}
+
+.mini-market{
+transform:scale(.92);
+transform-origin:bottom left;
 }
 
 }
@@ -603,59 +631,70 @@ Clima...
 <img src="logo 2026.png" alt="logo">
 </div>
 
-<div class="market-box">
+<nav class="menu">
+
+<a href="#">INÍCIO</a>
+<a href="#services">SERVIÇOS</a>
+<a href="#about">SOBRE</a>
+<a href="#contact">CONTATO</a>
+
+</nav>
+
+</header>
+
+<!-- ===== MARKET ===== -->
+
+<div class="mini-market">
 
 <div class="market-card">
 
-<div class="market-icon">
+<div class="market-left">
+
+<div class="market-icon btc-icon">
 ₿
 </div>
 
 <div class="market-info">
 
-<span class="market-title">
-BTC / BRL
-</span>
-
 <span class="market-price" id="btc-price">
-...
-</span>
-
-<span class="market-change" id="btc-change">
-...
+R$ 0
 </span>
 
 </div>
+
+</div>
+
+<span class="market-change" id="btc-change">
+0%
+</span>
 
 </div>
 
 <div class="market-card">
 
-<div class="market-icon">
+<div class="market-left">
+
+<div class="market-icon usd-icon">
 $
 </div>
 
 <div class="market-info">
 
-<span class="market-title">
-USD / BRL
+<span class="market-price" id="usd-price">
+R$ 0
 </span>
 
-<span class="market-price" id="usd-price">
-...
-</span>
+</div>
+
+</div>
 
 <span class="market-change" id="usd-change">
-...
+0%
 </span>
 
 </div>
 
 </div>
-
-</div>
-
-</header>
 
 <!-- ===== HERO ===== -->
 
@@ -882,15 +921,11 @@ Ligar Agora
 
 </section>
 
-<!-- ===== FOOTER ===== -->
-
 <footer>
 
 © 2026 Império Manutenções
 
 </footer>
-
-<!-- ===== WHATSAPP ===== -->
 
 <a class="whatsapp"
 href="https://wa.me/5544999999806">
@@ -984,8 +1019,6 @@ async function loadMiniMarket(){
 
 try{
 
-/* BTC */
-
 const btcResponse = await fetch(
 'https://api.binance.com/api/v3/ticker/24hr?symbol=BTCBRL'
 );
@@ -994,14 +1027,13 @@ const btcData = await btcResponse.json();
 
 document.getElementById('btc-price').innerText =
 'R$ ' +
-Math.round(Number(btcData.lastPrice));
+Math.round(Number(btcData.lastPrice)/1000) +
+'k';
 
 setVariation(
 document.getElementById('btc-change'),
 Number(btcData.priceChangePercent)
 );
-
-/* USD */
 
 const usdResponse = await fetch(
 'https://economia.awesomeapi.com.br/json/last/USD-BRL'
