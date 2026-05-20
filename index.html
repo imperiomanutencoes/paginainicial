@@ -59,7 +59,7 @@ background:#00bfff;
 border-radius:20px;
 }
 
-/* ===== HEADER ===== */
+/* ===== HEADER DESKTOP ===== */
 
 header{
 position:fixed;
@@ -74,6 +74,10 @@ align-items:center;
 background:rgba(0,0,0,.60);
 backdrop-filter:blur(16px);
 border-bottom:1px solid rgba(0,191,255,.10);
+}
+
+.top-mobile{
+display:contents;
 }
 
 /* ===== WEATHER ===== */
@@ -369,18 +373,6 @@ line-height:1.9;
 color:#dbeafe;
 }
 
-.badge{
-position:absolute;
-top:18px;
-right:18px;
-padding:8px 14px;
-border-radius:999px;
-font-size:11px;
-font-weight:800;
-background:#00bfff;
-color:#00111f;
-}
-
 /* ===== ABOUT ===== */
 
 .about{
@@ -415,7 +407,14 @@ margin-bottom:18px;
 .contact{
 padding:120px 20px;
 text-align:center;
-background:#061124;
+position:relative;
+background:
+linear-gradient(
+rgba(0,5,20,.88),
+rgba(0,5,20,.92)
+),
+url('contato-bg.jpg')
+center/cover no-repeat;
 }
 
 .contact h2{
@@ -439,7 +438,7 @@ color:#94a3b8;
 font-size:14px;
 }
 
-/* ===== MINI MARKET ===== */
+/* ===== MARKET ===== */
 
 .mini-market{
 position:fixed;
@@ -454,7 +453,6 @@ border-radius:20px;
 background:rgba(2,6,23,.76);
 backdrop-filter:blur(14px);
 border:1px solid rgba(0,191,255,.10);
-box-shadow:0 0 20px rgba(0,191,255,.08);
 }
 
 .market-card{
@@ -470,7 +468,6 @@ linear-gradient(
 rgba(0,15,40,.96),
 rgba(0,5,18,.98)
 );
-border:1px solid rgba(0,191,255,.10);
 min-width:180px;
 }
 
@@ -549,7 +546,7 @@ box-shadow:0 0 26px rgba(0,191,255,.35);
 }
 
 /* ===================================================== */
-/* ================= MOBILE OTIMIZADO ================== */
+/* ================= MOBILE APENAS ===================== */
 /* ===================================================== */
 
 @media(max-width:1000px){
@@ -558,85 +555,80 @@ header{
 position:relative;
 display:flex;
 flex-direction:column;
-align-items:center;
-padding:12px 12px 0;
+padding:10px;
+gap:10px;
 background:transparent;
 backdrop-filter:none;
 border:none;
-gap:12px;
 }
 
-/* WEATHER */
+.top-mobile{
+width:100%;
+display:flex;
+gap:10px;
+align-items:stretch;
+}
 
 .weather-card{
-width:100%;
-padding:14px;
-border-radius:26px;
-gap:12px;
+width:48%;
+padding:10px;
+gap:10px;
+border-radius:22px;
+}
+
+.weather-icon{
+width:34px;
+height:34px;
+}
+
+#temperature{
+font-size:28px;
+}
+
+#city{
+font-size:12px;
+}
+
+#date{
+font-size:9px;
+}
+
+#description{
+font-size:10px;
+}
+
+#clock{
+font-size:9px;
+}
+
+.logo{
+width:52%;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:10px;
+border-radius:22px;
 background:
 linear-gradient(
 135deg,
 rgba(0,18,45,.96),
 rgba(0,5,18,.98)
 );
-box-shadow:
-0 0 25px rgba(0,191,255,.12);
-}
-
-.weather-icon{
-width:42px;
-height:42px;
-}
-
-.weather-top{
-gap:8px;
-}
-
-#temperature{
-font-size:34px;
-}
-
-#city{
-font-size:14px;
-}
-
-#date{
-font-size:11px;
-}
-
-#description{
-font-size:11px;
-}
-
-#clock{
-font-size:11px;
-}
-
-/* LOGO */
-
-.logo{
-width:100%;
-justify-content:center;
-margin-top:2px;
+border:1px solid rgba(0,191,255,.12);
 }
 
 .logo img{
-width:240px;
-max-width:90%;
+width:100%;
+max-width:180px;
 }
-
-/* MENU */
 
 .menu{
 width:100%;
 display:flex;
 justify-content:space-around;
-align-items:center;
-padding:16px 10px;
-border-top:1px solid rgba(255,255,255,.05);
-border-bottom:1px solid rgba(255,255,255,.05);
-background:
-rgba(0,0,0,.25);
+padding:14px 8px;
+border-radius:18px;
+background:rgba(0,0,0,.35);
 backdrop-filter:blur(12px);
 }
 
@@ -645,55 +637,26 @@ font-size:12px;
 font-weight:800;
 }
 
-/* HERO */
-
 .hero{
-padding:40px 18px 90px;
+padding:60px 18px 90px;
 min-height:auto;
 }
 
-.hero-content{
-text-align:center;
-}
-
 .hero h1{
-font-size:38px;
+font-size:40px;
 line-height:1.15;
-margin-bottom:18px;
 }
 
 .hero p{
 font-size:14px;
-line-height:1.7;
-margin-bottom:30px;
-}
-
-.buttons{
-gap:12px;
+line-height:1.8;
 }
 
 .btn{
 width:100%;
 padding:15px;
 font-size:14px;
-border-radius:16px;
 }
-
-/* TITLES */
-
-.section-title{
-margin-bottom:40px;
-}
-
-.section-title h2{
-font-size:38px;
-}
-
-.section-title p{
-font-size:14px;
-}
-
-/* SERVICES */
 
 .services{
 padding:80px 16px;
@@ -705,90 +668,33 @@ gap:18px;
 }
 
 .service-card{
-padding:32px 26px;
-border-radius:28px;
+padding:30px 24px;
 }
-
-.service-icon{
-width:72px;
-height:72px;
-font-size:28px;
-margin-bottom:24px;
-border-radius:22px;
-}
-
-.service-card h3{
-font-size:26px;
-line-height:1.2;
-margin-bottom:16px;
-}
-
-.service-card p{
-font-size:15px;
-line-height:1.9;
-}
-
-/* ABOUT */
 
 .about{
 grid-template-columns:1fr;
 padding:80px 18px;
-gap:30px;
 }
-
-.about-content h2{
-font-size:38px;
-}
-
-.about-content p{
-font-size:15px;
-}
-
-/* CONTACT */
 
 .contact{
 padding:80px 18px;
 }
-
-.contact h2{
-font-size:38px;
-}
-
-.contact p{
-font-size:15px;
-}
-
-/* MARKET */
 
 .mini-market{
 left:8px;
 bottom:8px;
 padding:6px;
 gap:6px;
-border-radius:20px;
 }
 
 .market-card{
 min-width:135px;
 padding:8px 10px;
-border-radius:18px;
-}
-
-.market-icon{
-width:28px;
-height:28px;
-font-size:12px;
-}
-
-.market-price{
-font-size:12px;
 }
 
 .market-change{
 display:none;
 }
-
-/* WHATSAPP */
 
 .whatsapp{
 width:62px;
@@ -806,9 +712,9 @@ bottom:16px;
 
 <body>
 
-<!-- ===== HEADER ===== -->
-
 <header>
+
+<div class="top-mobile">
 
 <div class="weather-card">
 
@@ -856,6 +762,8 @@ alt="logo">
 
 </div>
 
+</div>
+
 <nav class="menu">
 
 <a href="#">
@@ -877,58 +785,6 @@ CONTATO
 </nav>
 
 </header>
-
-<!-- ===== MARKET ===== -->
-
-<div class="mini-market">
-
-<div class="market-card">
-
-<div class="market-left">
-
-<div class="market-icon btc-icon">
-₿
-</div>
-
-<span class="market-price"
-id="btc-price">
-R$ 0
-</span>
-
-</div>
-
-<span class="market-change"
-id="btc-change">
-0%
-</span>
-
-</div>
-
-<div class="market-card">
-
-<div class="market-left">
-
-<div class="market-icon usd-icon">
-$
-</div>
-
-<span class="market-price"
-id="usd-price">
-R$ 0
-</span>
-
-</div>
-
-<span class="market-change"
-id="usd-change">
-0%
-</span>
-
-</div>
-
-</div>
-
-<!-- ===== HERO ===== -->
 
 <section class="hero">
 
@@ -981,8 +837,6 @@ Ver Serviços
 </div>
 
 </section>
-
-<!-- ===== SERVICES ===== -->
 
 <section class="services"
 id="services">
@@ -1037,10 +891,6 @@ do sistema operacional.
 
 <div class="service-card">
 
-<div class="badge">
-MESMO DIA
-</div>
-
 <div class="service-icon">
 <i class="fa-solid fa-mobile-screen"></i>
 </div>
@@ -1056,62 +906,9 @@ entrega rápida no mesmo dia.
 
 </div>
 
-<div class="service-card">
-
-<div class="service-icon">
-<i class="fa-solid fa-hard-drive"></i>
-</div>
-
-<h3>
-Upgrade SSD
-</h3>
-
-<p>
-Mais velocidade e desempenho
-para notebooks e computadores.
-</p>
-
-</div>
-
-<div class="service-card">
-
-<div class="service-icon">
-<i class="fa-solid fa-screwdriver-wrench"></i>
-</div>
-
-<h3>
-Limpeza Interna
-</h3>
-
-<p>
-Manutenção preventiva profissional
-com limpeza completa do equipamento.
-</p>
-
-</div>
-
-<div class="service-card">
-
-<div class="service-icon">
-<i class="fa-solid fa-gamepad"></i>
-</div>
-
-<h3>
-PC Gamer
-</h3>
-
-<p>
-Montagem, upgrades e otimização
-para setups gamers.
-</p>
-
-</div>
-
 </div>
 
 </section>
-
-<!-- ===== ABOUT ===== -->
 
 <section class="about"
 id="about">
@@ -1140,16 +937,9 @@ Trabalhamos com manutenção, upgrades,
 instalação de softwares e drivers remotamente.
 </p>
 
-<p>
-Atendimento rápido, transparente e com foco
-em qualidade e desempenho.
-</p>
-
 </div>
 
 </section>
-
-<!-- ===== CONTACT ===== -->
 
 <section class="contact"
 id="contact">
@@ -1192,7 +982,53 @@ Ligar Agora
 
 </footer>
 
-<!-- ===== WHATSAPP ===== -->
+<div class="mini-market">
+
+<div class="market-card">
+
+<div class="market-left">
+
+<div class="market-icon btc-icon">
+₿
+</div>
+
+<span class="market-price"
+id="btc-price">
+R$ 0
+</span>
+
+</div>
+
+<span class="market-change"
+id="btc-change">
+0%
+</span>
+
+</div>
+
+<div class="market-card">
+
+<div class="market-left">
+
+<div class="market-icon usd-icon">
+$
+</div>
+
+<span class="market-price"
+id="usd-price">
+R$ 0
+</span>
+
+</div>
+
+<span class="market-change"
+id="usd-change">
+0%
+</span>
+
+</div>
+
+</div>
 
 <a class="whatsapp"
 href="https://wa.me/5544999999806">
@@ -1270,8 +1106,6 @@ new Date().toLocaleTimeString(
 
 }
 
-/* ===== MARKET ===== */
-
 function setVariation(
 element,
 value
@@ -1307,8 +1141,6 @@ async function loadMiniMarket(){
 
 try{
 
-/* BTC */
-
 const btcResponse =
 await fetch(
 'https://api.binance.com/api/v3/ticker/24hr?symbol=BTCBRL'
@@ -1335,8 +1167,6 @@ Number(
 btcData.priceChangePercent
 )
 );
-
-/* USD */
 
 const usdResponse =
 await fetch(
@@ -1370,8 +1200,6 @@ console.log(err);
 }
 
 }
-
-/* ===== INIT ===== */
 
 loadWeather();
 
