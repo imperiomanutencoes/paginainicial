@@ -29,7 +29,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 <style>
 
-/* ===== RESET ===== */
+/* ================= RESET ================= */
 
 *{
 margin:0;
@@ -48,18 +48,7 @@ color:#fff;
 overflow-x:hidden;
 }
 
-/* ===== SCROLL ===== */
-
-::-webkit-scrollbar{
-width:8px;
-}
-
-::-webkit-scrollbar-thumb{
-background:#00bfff;
-border-radius:20px;
-}
-
-/* ===== HEADER DESKTOP ===== */
+/* ================= HEADER ================= */
 
 header{
 position:fixed;
@@ -67,43 +56,55 @@ top:0;
 left:0;
 width:100%;
 z-index:999;
+
 padding:18px 40px;
+
 display:grid;
 grid-template-columns:1fr auto 1fr;
 align-items:center;
+
 background:rgba(0,0,0,.60);
+
 backdrop-filter:blur(16px);
+
 border-bottom:1px solid rgba(0,191,255,.10);
 }
+
+/* desktop normal */
 
 .top-mobile{
 display:contents;
 }
 
-/* ===== WEATHER ===== */
+/* ================= WEATHER ================= */
 
 .weather-card{
 display:flex;
 align-items:center;
 gap:14px;
+
 padding:14px 18px;
-width:430px;
+
+width:420px;
+
 border-radius:24px;
+
 background:
 linear-gradient(
 135deg,
 rgba(0,18,45,.96),
 rgba(0,7,20,.96)
 );
+
 border:1px solid rgba(0,191,255,.15);
+
 box-shadow:
-0 0 30px rgba(0,191,255,.08),
-inset 0 0 20px rgba(0,191,255,.03);
+0 0 30px rgba(0,191,255,.08);
 }
 
 .weather-icon{
-width:52px;
-height:52px;
+width:50px;
+height:50px;
 }
 
 .weather-info{
@@ -114,7 +115,7 @@ flex-direction:column;
 .weather-top{
 display:flex;
 align-items:center;
-gap:12px;
+gap:10px;
 }
 
 #temperature{
@@ -126,7 +127,6 @@ line-height:1;
 #city{
 font-size:18px;
 font-weight:800;
-letter-spacing:.5px;
 }
 
 #date{
@@ -136,9 +136,9 @@ margin-top:4px;
 }
 
 #description{
-font-size:13px;
-font-weight:700;
+font-size:12px;
 color:#00bfff;
+font-weight:700;
 margin-top:4px;
 text-transform:capitalize;
 }
@@ -149,7 +149,7 @@ color:#94a3b8;
 margin-top:4px;
 }
 
-/* ===== LOGO ===== */
+/* ================= LOGO ================= */
 
 .logo{
 display:flex;
@@ -159,10 +159,12 @@ justify-content:center;
 .logo img{
 width:310px;
 filter:
-drop-shadow(0 0 18px rgba(0,191,255,.35));
+drop-shadow(
+0 0 18px rgba(0,191,255,.35)
+);
 }
 
-/* ===== MENU ===== */
+/* ================= MENU ================= */
 
 .menu{
 display:flex;
@@ -182,15 +184,19 @@ transition:.3s;
 color:#00bfff;
 }
 
-/* ===== HERO ===== */
+/* ================= HERO ================= */
 
 .hero{
 position:relative;
+
 min-height:100vh;
+
 display:flex;
 align-items:center;
 justify-content:center;
-padding:220px 20px 120px;
+
+padding:240px 20px 120px;
+
 overflow:hidden;
 }
 
@@ -198,23 +204,30 @@ overflow:hidden;
 position:absolute;
 top:0;
 left:0;
+
 width:100%;
 height:100%;
+
 object-fit:cover;
+
 z-index:-2;
 }
 
 .hero::before{
 content:'';
+
 position:absolute;
+
 width:100%;
 height:100%;
+
 background:
 linear-gradient(
 180deg,
 rgba(0,0,0,.82),
 rgba(1,6,20,.96)
 );
+
 z-index:-1;
 }
 
@@ -241,7 +254,7 @@ color:#d1d5db;
 margin-bottom:40px;
 }
 
-/* ===== BUTTONS ===== */
+/* ================= BUTTONS ================= */
 
 .buttons{
 display:flex;
@@ -282,15 +295,17 @@ background:#00bfff;
 color:#00111f;
 }
 
-/* ===== SERVICES ===== */
+/* ================= SERVICES ================= */
 
 .services{
 padding:130px 30px;
+
 background:
 linear-gradient(
 rgba(0,5,15,.90),
 rgba(0,5,15,.96)
 ),
+
 url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop')
 center/cover no-repeat;
 }
@@ -322,46 +337,57 @@ margin:auto;
 
 .service-card{
 position:relative;
+
 padding:38px 34px;
-border-radius:32px;
+
+border-radius:30px;
+
 background:
 linear-gradient(
 180deg,
 rgba(3,15,35,.96),
 rgba(1,8,20,.98)
 );
+
 border:1px solid rgba(0,191,255,.14);
+
 transition:.35s;
-overflow:hidden;
 }
 
 .service-card:hover{
 transform:translateY(-8px);
+
 border-color:#00bfff;
-box-shadow:0 0 30px rgba(0,191,255,.16);
+
+box-shadow:
+0 0 30px rgba(0,191,255,.16);
 }
 
 .service-icon{
-width:78px;
-height:78px;
-border-radius:24px;
+width:74px;
+height:74px;
+
+border-radius:22px;
+
 display:flex;
 align-items:center;
 justify-content:center;
-margin-bottom:26px;
-font-size:32px;
+
+margin-bottom:24px;
+
+font-size:30px;
 color:#00bfff;
+
 background:
 linear-gradient(
 180deg,
 rgba(0,191,255,.12),
 rgba(0,191,255,.04)
 );
-border:1px solid rgba(0,191,255,.14);
 }
 
 .service-card h3{
-font-size:30px;
+font-size:28px;
 font-weight:800;
 margin-bottom:16px;
 color:#00bfff;
@@ -369,19 +395,36 @@ color:#00bfff;
 
 .service-card p{
 font-size:16px;
-line-height:1.9;
+line-height:1.8;
 color:#dbeafe;
 }
 
-/* ===== ABOUT ===== */
+.badge{
+position:absolute;
+top:18px;
+right:18px;
+
+padding:8px 14px;
+
+border-radius:999px;
+
+font-size:11px;
+font-weight:800;
+
+background:#00bfff;
+color:#00111f;
+}
+
+/* ================= ABOUT ================= */
 
 .about{
 padding:120px 40px;
+
 display:grid;
 grid-template-columns:1fr 1fr;
+
 gap:60px;
 align-items:center;
-background:#020617;
 }
 
 .about img{
@@ -402,17 +445,19 @@ color:#d1d5db;
 margin-bottom:18px;
 }
 
-/* ===== CONTACT ===== */
+/* ================= CONTACT ================= */
 
 .contact{
 padding:120px 20px;
+
 text-align:center;
-position:relative;
+
 background:
 linear-gradient(
-rgba(0,5,20,.88),
+rgba(0,5,20,.84),
 rgba(0,5,20,.92)
 ),
+
 url('contato-bg.jpg')
 center/cover no-repeat;
 }
@@ -429,7 +474,7 @@ color:#d1d5db;
 margin-bottom:34px;
 }
 
-/* ===== FOOTER ===== */
+/* ================= FOOTER ================= */
 
 footer{
 padding:24px;
@@ -438,37 +483,49 @@ color:#94a3b8;
 font-size:14px;
 }
 
-/* ===== MARKET ===== */
+/* ================= MINI MARKET ================= */
 
 .mini-market{
 position:fixed;
 left:12px;
 bottom:12px;
+
 z-index:999;
+
 display:flex;
 flex-direction:column;
+
 gap:8px;
+
 padding:8px;
-border-radius:20px;
-background:rgba(2,6,23,.76);
+
+border-radius:18px;
+
+background:
+rgba(2,6,23,.76);
+
 backdrop-filter:blur(14px);
-border:1px solid rgba(0,191,255,.10);
 }
 
 .market-card{
 display:flex;
 align-items:center;
 justify-content:space-between;
+
 gap:10px;
+
 padding:10px 12px;
+
 border-radius:18px;
+
 background:
 linear-gradient(
 135deg,
 rgba(0,15,40,.96),
 rgba(0,5,18,.98)
 );
-min-width:180px;
+
+min-width:170px;
 }
 
 .market-left{
@@ -478,13 +535,16 @@ gap:10px;
 }
 
 .market-icon{
-width:34px;
-height:34px;
+width:32px;
+height:32px;
+
 border-radius:50%;
+
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:14px;
+
+font-size:13px;
 font-weight:800;
 color:#fff;
 }
@@ -508,7 +568,7 @@ linear-gradient(
 }
 
 .market-price{
-font-size:14px;
+font-size:13px;
 font-weight:800;
 }
 
@@ -525,183 +585,283 @@ color:#00d084;
 color:#ff5f5f;
 }
 
-/* ===== WHATSAPP ===== */
+/* ================= WHATSAPP ================= */
 
 .whatsapp{
 position:fixed;
 right:20px;
 bottom:20px;
+
 width:66px;
 height:66px;
+
 border-radius:50%;
+
 background:#00bfff;
+
 display:flex;
 align-items:center;
 justify-content:center;
+
 font-size:30px;
 color:#00111f;
+
 text-decoration:none;
+
 z-index:999;
-box-shadow:0 0 26px rgba(0,191,255,.35);
+
+box-shadow:
+0 0 26px rgba(0,191,255,.35);
 }
 
-/* ===================================================== */
-/* ================= MOBILE APENAS ===================== */
-/* ===================================================== */
+/* ================= MOBILE ================= */
 
 @media(max-width:1000px){
 
 header{
 position:relative;
+
 display:flex;
 flex-direction:column;
+
 padding:10px;
-gap:10px;
+
+gap:8px;
+
 background:transparent;
+
 backdrop-filter:none;
+
 border:none;
 }
+
+/* MOBILE TOPO */
 
 .top-mobile{
 width:100%;
 display:flex;
-gap:10px;
+gap:8px;
 align-items:stretch;
 }
 
+/* WEATHER */
+
 .weather-card{
-width:48%;
-padding:10px;
-gap:10px;
-border-radius:22px;
+width:50%;
+
+padding:8px;
+
+gap:8px;
+
+border-radius:20px;
 }
 
 .weather-icon{
-width:34px;
-height:34px;
+width:28px;
+height:28px;
 }
 
 #temperature{
-font-size:28px;
+font-size:22px;
 }
 
 #city{
-font-size:12px;
-}
-
-#date{
-font-size:9px;
-}
-
-#description{
 font-size:10px;
 }
 
-#clock{
-font-size:9px;
+#date{
+font-size:8px;
 }
 
+#description{
+font-size:8px;
+}
+
+#clock{
+font-size:8px;
+}
+
+/* LOGO */
+
 .logo{
-width:52%;
+width:50%;
+
 display:flex;
-justify-content:center;
 align-items:center;
-padding:10px;
-border-radius:22px;
+justify-content:center;
+
+padding:8px;
+
+border-radius:20px;
+
 background:
 linear-gradient(
 135deg,
 rgba(0,18,45,.96),
-rgba(0,5,18,.98)
+rgba(0,7,20,.96)
 );
-border:1px solid rgba(0,191,255,.12);
 }
 
 .logo img{
 width:100%;
-max-width:180px;
+max-width:150px;
 }
+
+/* MENU */
 
 .menu{
 width:100%;
+
 display:flex;
 justify-content:space-around;
-padding:14px 8px;
-border-radius:18px;
-background:rgba(0,0,0,.35);
+
+padding:10px 6px;
+
+border-radius:16px;
+
+background:
+rgba(0,0,0,.35);
+
 backdrop-filter:blur(12px);
 }
 
 .menu a{
-font-size:12px;
-font-weight:800;
+font-size:10px;
 }
 
+/* HERO */
+
 .hero{
-padding:60px 18px 90px;
+padding:50px 16px 80px;
 min-height:auto;
 }
 
 .hero h1{
-font-size:40px;
-line-height:1.15;
+font-size:34px;
 }
 
 .hero p{
-font-size:14px;
-line-height:1.8;
+font-size:13px;
+line-height:1.7;
 }
+
+/* BUTTONS */
 
 .btn{
 width:100%;
-padding:15px;
-font-size:14px;
+padding:14px;
+font-size:13px;
 }
 
+/* SERVICES */
+
 .services{
-padding:80px 16px;
+padding:80px 14px;
+}
+
+.section-title h2{
+font-size:34px;
+}
+
+.section-title p{
+font-size:13px;
 }
 
 .services-grid{
 grid-template-columns:1fr;
-gap:18px;
+gap:16px;
 }
 
 .service-card{
-padding:30px 24px;
+padding:28px 22px;
 }
+
+.service-icon{
+width:64px;
+height:64px;
+font-size:24px;
+}
+
+.service-card h3{
+font-size:24px;
+}
+
+.service-card p{
+font-size:14px;
+}
+
+/* ABOUT */
 
 .about{
 grid-template-columns:1fr;
 padding:80px 18px;
 }
 
+.about-content h2{
+font-size:34px;
+}
+
+.about-content p{
+font-size:14px;
+}
+
+/* CONTACT */
+
 .contact{
 padding:80px 18px;
 }
 
+.contact h2{
+font-size:34px;
+}
+
+.contact p{
+font-size:14px;
+}
+
+/* MARKET */
+
 .mini-market{
-left:8px;
-bottom:8px;
-padding:6px;
-gap:6px;
+left:5px;
+bottom:5px;
+
+padding:4px;
+
+gap:4px;
+
+border-radius:14px;
 }
 
 .market-card{
-min-width:135px;
-padding:8px 10px;
+min-width:95px;
+
+padding:5px 7px;
+
+border-radius:14px;
+}
+
+.market-icon{
+width:18px;
+height:18px;
+font-size:8px;
+}
+
+.market-price{
+font-size:8px;
 }
 
 .market-change{
 display:none;
 }
 
+/* WHATSAPP */
+
 .whatsapp{
-width:62px;
-height:62px;
-font-size:28px;
-right:16px;
-bottom:16px;
+width:58px;
+height:58px;
+font-size:24px;
+right:14px;
+bottom:14px;
 }
 
 }
@@ -766,21 +926,10 @@ alt="logo">
 
 <nav class="menu">
 
-<a href="#">
-INÍCIO
-</a>
-
-<a href="#services">
-SERVIÇOS
-</a>
-
-<a href="#about">
-SOBRE
-</a>
-
-<a href="#contact">
-CONTATO
-</a>
+<a href="#">INÍCIO</a>
+<a href="#services">SERVIÇOS</a>
+<a href="#about">SOBRE</a>
+<a href="#contact">CONTATO</a>
 
 </nav>
 
@@ -858,12 +1007,74 @@ Atendimento rápido e especializado
 <div class="service-card">
 
 <div class="service-icon">
+<i class="fa-solid fa-gears"></i>
+</div>
+
+<h3>Formatação</h3>
+
+<p>
+Instalação, otimização e atualização completa
+do sistema operacional.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<div class="badge">
+MESMO DIA
+</div>
+
+<div class="service-icon">
+<i class="fa-solid fa-mobile-screen"></i>
+</div>
+
+<h3>Troca de Tela</h3>
+
+<p>
+Troca de telas e baterias com entrega rápida
+no mesmo dia.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">
+<i class="fa-solid fa-hard-drive"></i>
+</div>
+
+<h3>Upgrade SSD</h3>
+
+<p>
+Mais velocidade e desempenho
+para notebooks e computadores.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">
+<i class="fa-solid fa-screwdriver-wrench"></i>
+</div>
+
+<h3>Limpeza Interna</h3>
+
+<p>
+Manutenção preventiva profissional
+com limpeza completa do equipamento.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">
 <i class="fa-solid fa-shield-virus"></i>
 </div>
 
-<h3>
-Remoção de Vírus
-</h3>
+<h3>Remoção de Vírus</h3>
 
 <p>
 Eliminação de vírus, malwares
@@ -875,33 +1086,14 @@ e otimização completa do sistema.
 <div class="service-card">
 
 <div class="service-icon">
-<i class="fa-solid fa-gears"></i>
+<i class="fa-solid fa-gamepad"></i>
 </div>
 
-<h3>
-Formatação
-</h3>
+<h3>PC Gamer</h3>
 
 <p>
-Instalação, otimização e atualização completa
-do sistema operacional.
-</p>
-
-</div>
-
-<div class="service-card">
-
-<div class="service-icon">
-<i class="fa-solid fa-mobile-screen"></i>
-</div>
-
-<h3>
-Troca de Tela
-</h3>
-
-<p>
-Troca de telas e baterias com
-entrega rápida no mesmo dia.
+Montagem, upgrades e otimização
+para setups gamers.
 </p>
 
 </div>
@@ -935,6 +1127,11 @@ técnica especializada em informática e celulares.
 <p>
 Trabalhamos com manutenção, upgrades,
 instalação de softwares e drivers remotamente.
+</p>
+
+<p>
+Atendimento rápido, transparente e com foco
+em qualidade e desempenho.
 </p>
 
 </div>
@@ -1039,7 +1236,7 @@ href="https://wa.me/5544999999806">
 
 <script>
 
-/* ===== WEATHER ===== */
+/* WEATHER */
 
 const API_KEY =
 'fc1eff14c9dd0ecd8b690cb8cb3bc370';
@@ -1105,6 +1302,8 @@ new Date().toLocaleTimeString(
 );
 
 }
+
+/* MARKET */
 
 function setVariation(
 element,
@@ -1200,6 +1399,8 @@ console.log(err);
 }
 
 }
+
+/* INIT */
 
 loadWeather();
 
