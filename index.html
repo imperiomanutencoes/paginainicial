@@ -448,18 +448,36 @@ margin-bottom:18px;
 /* ================= CONTACT ================= */
 
 .contact{
+position:relative;
+
 padding:120px 20px;
 
 text-align:center;
 
+overflow:hidden;
+
+background:url('contato-bg.jpg')
+center center/cover no-repeat;
+}
+
+.contact::before{
+content:'';
+
+position:absolute;
+inset:0;
+
 background:
 linear-gradient(
-rgba(0,5,20,.84),
-rgba(0,5,20,.92)
-),
+rgba(0,5,20,.82),
+rgba(0,5,20,.90)
+);
 
-url('contato-bg.jpg')
-center/cover no-repeat;
+z-index:0;
+}
+
+.contact *{
+position:relative;
+z-index:1;
 }
 
 .contact h2{
@@ -472,6 +490,26 @@ margin-bottom:18px;
 font-size:18px;
 color:#d1d5db;
 margin-bottom:34px;
+}
+
+/* MOBILE */
+
+@media(max-width:1000px){
+
+.contact{
+padding:90px 18px;
+background-position:center;
+background-size:cover;
+}
+
+.contact h2{
+font-size:34px;
+}
+
+.contact p{
+font-size:14px;
+}
+
 }
 
 /* ================= FOOTER ================= */
