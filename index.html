@@ -4,15 +4,19 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>Império Manutenções</title>
 
 <link rel="icon" type="image/png" href="logo.png">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -129,7 +133,9 @@ justify-content:center;
 
 .logo img{
 width:320px;
-filter:drop-shadow(0 0 18px rgba(0,191,255,.30));
+filter:drop-shadow(
+0 0 18px rgba(0,191,255,.30)
+);
 }
 
 /* ===== MENU ===== */
@@ -221,7 +227,7 @@ flex-wrap:wrap;
 
 .btn{
 padding:16px 32px;
-border-radius:14px;
+border-radius:16px;
 font-weight:700;
 display:flex;
 align-items:center;
@@ -255,26 +261,26 @@ color:#00111f;
 
 .mini-market{
 position:fixed;
-left:12px;
-bottom:12px;
+left:8px;
+bottom:8px;
 z-index:9999;
 display:flex;
 flex-direction:column;
-gap:10px;
-padding:12px;
-border-radius:20px;
-background:rgba(2,6,23,.88);
-backdrop-filter:blur(14px);
+gap:6px;
+padding:6px;
+border-radius:18px;
+background:rgba(2,6,23,.78);
+backdrop-filter:blur(12px);
 border:1px solid rgba(0,191,255,.10);
-box-shadow:0 0 20px rgba(0,191,255,.08);
+box-shadow:0 0 20px rgba(0,191,255,.10);
 }
 
 .market-card{
 display:flex;
 align-items:center;
 justify-content:space-between;
-gap:18px;
-padding:12px 14px;
+gap:10px;
+padding:8px 10px;
 border-radius:18px;
 background:linear-gradient(
 135deg,
@@ -282,23 +288,23 @@ rgba(0,15,40,.95),
 rgba(0,5,18,.96)
 );
 border:1px solid rgba(0,191,255,.12);
-min-width:230px;
+min-width:170px;
 }
 
 .market-left{
 display:flex;
 align-items:center;
-gap:12px;
+gap:10px;
 }
 
 .market-icon{
-width:40px;
-height:40px;
+width:30px;
+height:30px;
 border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:18px;
+font-size:13px;
 font-weight:800;
 color:#fff;
 }
@@ -321,19 +327,13 @@ background:linear-gradient(
 box-shadow:0 0 12px rgba(0,191,255,.35);
 }
 
-.market-info{
-display:flex;
-flex-direction:column;
-gap:2px;
-}
-
 .market-price{
-font-size:16px;
+font-size:13px;
 font-weight:800;
 }
 
 .market-change{
-font-size:14px;
+font-size:12px;
 font-weight:800;
 }
 
@@ -535,11 +535,37 @@ box-shadow:0 0 25px rgba(0,191,255,.35);
 header{
 grid-template-columns:1fr;
 gap:18px;
-padding:18px;
+padding:14px;
 }
 
 .weather-card{
 width:100%;
+padding:12px;
+}
+
+.weather-icon{
+width:34px;
+height:34px;
+}
+
+#temperature{
+font-size:26px;
+}
+
+#city{
+font-size:13px;
+}
+
+#date{
+font-size:10px;
+}
+
+#description{
+font-size:10px;
+}
+
+#clock{
+font-size:9px;
 }
 
 .logo img{
@@ -548,15 +574,16 @@ width:240px;
 
 .menu{
 justify-content:center;
+gap:20px;
 flex-wrap:wrap;
 }
 
-.services-grid{
-grid-template-columns:1fr;
+.hero{
+padding-top:320px;
 }
 
 .hero h1{
-font-size:38px;
+font-size:52px;
 }
 
 .hero p{
@@ -567,14 +594,44 @@ font-size:15px;
 font-size:42px;
 }
 
+.services-grid{
+grid-template-columns:1fr;
+}
+
 .about{
 grid-template-columns:1fr;
 padding:80px 20px;
 }
 
+/* ===== MINI MARKET MOBILE ===== */
+
 .mini-market{
-transform:scale(.92);
-transform-origin:bottom left;
+left:8px;
+bottom:8px;
+padding:5px;
+gap:5px;
+border-radius:18px;
+}
+
+.market-card{
+min-width:120px;
+padding:8px 10px;
+border-radius:18px;
+gap:8px;
+}
+
+.market-icon{
+width:26px;
+height:26px;
+font-size:12px;
+}
+
+.market-price{
+font-size:12px;
+}
+
+.market-change{
+display:none;
 }
 
 }
@@ -628,15 +685,27 @@ Clima...
 </div>
 
 <div class="logo">
-<img src="logo 2026.png" alt="logo">
+
+<img src="logo 2026.png"
+alt="logo">
+
 </div>
 
 <nav class="menu">
 
 <a href="#">INÍCIO</a>
-<a href="#services">SERVIÇOS</a>
-<a href="#about">SOBRE</a>
-<a href="#contact">CONTATO</a>
+
+<a href="#services">
+SERVIÇOS
+</a>
+
+<a href="#about">
+SOBRE
+</a>
+
+<a href="#contact">
+CONTATO
+</a>
 
 </nav>
 
@@ -654,17 +723,15 @@ Clima...
 ₿
 </div>
 
-<div class="market-info">
-
-<span class="market-price" id="btc-price">
+<span class="market-price"
+id="btc-price">
 R$ 0
 </span>
 
 </div>
 
-</div>
-
-<span class="market-change" id="btc-change">
+<span class="market-change"
+id="btc-change">
 0%
 </span>
 
@@ -678,17 +745,15 @@ R$ 0
 $
 </div>
 
-<div class="market-info">
-
-<span class="market-price" id="usd-price">
+<span class="market-price"
+id="usd-price">
 R$ 0
 </span>
 
 </div>
 
-</div>
-
-<span class="market-change" id="usd-change">
+<span class="market-change"
+id="usd-change">
 0%
 </span>
 
@@ -701,20 +766,29 @@ R$ 0
 <section class="hero">
 
 <video autoplay muted loop playsinline>
-<source src="video.mp4" type="video/mp4">
+
+<source src="video.mp4"
+type="video/mp4">
+
 </video>
 
 <div class="hero-content">
 
 <h1>
+
 Assistência Técnica em
-<span>Informática e Celulares</span>
+<span>
+Informática e Celulares
+</span>
+
 </h1>
 
 <p>
+
 Especialistas em manutenção de computadores,
 notebooks e celulares com atendimento rápido
 e profissional.
+
 </p>
 
 <div class="buttons">
@@ -723,6 +797,7 @@ e profissional.
 class="btn btn-primary">
 
 <i class="fa-brands fa-whatsapp"></i>
+
 WhatsApp
 
 </a>
@@ -742,11 +817,14 @@ Ver Serviços
 
 <!-- ===== SERVICES ===== -->
 
-<section class="services" id="services">
+<section class="services"
+id="services">
 
 <div class="section-title">
 
-<h2>Nossos Serviços</h2>
+<h2>
+Nossos Serviços
+</h2>
 
 <p>
 Atendimento rápido e especializado
@@ -785,7 +863,9 @@ MESMO DIA
 
 <p>
 Troca de telas e baterias com
-<strong>entrega rápida no mesmo dia.</strong>
+<strong>
+entrega rápida no mesmo dia.
+</strong>
 </p>
 
 </div>
@@ -856,7 +936,8 @@ para setups gamers.
 
 <!-- ===== ABOUT ===== -->
 
-<section class="about" id="about">
+<section class="about"
+id="about">
 
 <div class="about-image">
 
@@ -868,7 +949,9 @@ alt="assistencia">
 
 <div class="about-content">
 
-<h2>Sobre Nós</h2>
+<h2>
+Sobre Nós
+</h2>
 
 <p>
 A Império Manutenções oferece assistência
@@ -891,9 +974,12 @@ em qualidade e desempenho.
 
 <!-- ===== CONTACT ===== -->
 
-<section class="contact" id="contact">
+<section class="contact"
+id="contact">
 
-<h2>Entre em Contato</h2>
+<h2>
+Entre em Contato
+</h2>
 
 <p>
 Solicite agora mesmo seu orçamento.
@@ -905,6 +991,7 @@ Solicite agora mesmo seu orçamento.
 class="btn btn-primary">
 
 <i class="fa-brands fa-whatsapp"></i>
+
 WhatsApp
 
 </a>
@@ -913,6 +1000,7 @@ WhatsApp
 class="btn btn-secondary">
 
 <i class="fa-solid fa-phone"></i>
+
 Ligar Agora
 
 </a>
@@ -926,6 +1014,8 @@ Ligar Agora
 © 2026 Império Manutenções
 
 </footer>
+
+<!-- ===== WHATSAPP ===== -->
 
 <a class="whatsapp"
 href="https://wa.me/5544999999806">
@@ -951,13 +1041,19 @@ const response = await fetch(
 
 const data = await response.json();
 
-document.getElementById('temperature').innerText =
+document.getElementById(
+'temperature'
+).innerText =
 Math.round(data.main.temp) + '°C';
 
-document.getElementById('description').innerText =
+document.getElementById(
+'description'
+).innerText =
 data.weather[0].description;
 
-document.getElementById('weather-icon').src =
+document.getElementById(
+'weather-icon'
+).src =
 `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
 
 }catch(err){
@@ -972,25 +1068,37 @@ function updateDate(){
 
 const now = new Date();
 
-document.getElementById('date').innerText =
-now.toLocaleDateString('pt-BR',{
+document.getElementById(
+'date'
+).innerText =
+now.toLocaleDateString(
+'pt-BR',
+{
 weekday:'long',
 day:'numeric',
 month:'long'
-});
+}
+);
 
 }
 
 function updateClock(){
 
-document.getElementById('clock').innerText =
-new Date().toLocaleTimeString('pt-BR');
+document.getElementById(
+'clock'
+).innerText =
+new Date().toLocaleTimeString(
+'pt-BR'
+);
 
 }
 
 /* ===== MARKET ===== */
 
-function setVariation(element,value){
+function setVariation(
+element,
+value
+){
 
 element.classList.remove(
 'up',
@@ -1002,14 +1110,17 @@ if(value >= 0){
 element.classList.add('up');
 
 element.innerText =
-'+' + value.toFixed(2) + '%';
+'+' +
+value.toFixed(2) +
+'%';
 
 }else{
 
 element.classList.add('down');
 
 element.innerText =
-value.toFixed(2) + '%';
+value.toFixed(2) +
+'%';
 
 }
 
@@ -1019,35 +1130,60 @@ async function loadMiniMarket(){
 
 try{
 
-const btcResponse = await fetch(
+/* BTC */
+
+const btcResponse =
+await fetch(
 'https://api.binance.com/api/v3/ticker/24hr?symbol=BTCBRL'
 );
 
-const btcData = await btcResponse.json();
+const btcData =
+await btcResponse.json();
 
-document.getElementById('btc-price').innerText =
+document.getElementById(
+'btc-price'
+).innerText =
 'R$ ' +
-Math.round(Number(btcData.lastPrice)/1000) +
+Math.round(
+Number(btcData.lastPrice)
+/1000
+) +
 'k';
 
 setVariation(
-document.getElementById('btc-change'),
-Number(btcData.priceChangePercent)
+document.getElementById(
+'btc-change'
+),
+Number(
+btcData.priceChangePercent
+)
 );
 
-const usdResponse = await fetch(
+/* USD */
+
+const usdResponse =
+await fetch(
 'https://economia.awesomeapi.com.br/json/last/USD-BRL'
 );
 
-const usdData = await usdResponse.json();
+const usdData =
+await usdResponse.json();
 
-document.getElementById('usd-price').innerText =
+document.getElementById(
+'usd-price'
+).innerText =
 'R$ ' +
-Number(usdData.USDBRL.bid).toFixed(2);
+Number(
+usdData.USDBRL.bid
+).toFixed(2);
 
 setVariation(
-document.getElementById('usd-change'),
-Number(usdData.USDBRL.pctChange)
+document.getElementById(
+'usd-change'
+),
+Number(
+usdData.USDBRL.pctChange
+)
 );
 
 }catch(err){
@@ -1061,13 +1197,27 @@ console.log(err);
 /* ===== INIT ===== */
 
 loadWeather();
+
 updateDate();
+
 updateClock();
+
 loadMiniMarket();
 
-setInterval(updateClock,1000);
-setInterval(loadWeather,600000);
-setInterval(loadMiniMarket,30000);
+setInterval(
+updateClock,
+1000
+);
+
+setInterval(
+loadWeather,
+600000
+);
+
+setInterval(
+loadMiniMarket,
+30000
+);
 
 </script>
 
