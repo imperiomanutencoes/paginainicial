@@ -4,28 +4,18 @@
 <head>
 
 <meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Império Manutenções</title>
 
-<link rel="icon"
-type="image/png"
-href="logo.png">
+<link rel="icon" type="image/png" href="logo.png">
 
-<link rel="preconnect"
-href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
-rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
 
@@ -39,6 +29,7 @@ box-sizing:border-box;
 
 html{
 scroll-behavior:smooth;
+overflow-x:hidden;
 }
 
 body{
@@ -46,6 +37,11 @@ font-family:'Montserrat',sans-serif;
 background:#020617;
 color:#fff;
 overflow-x:hidden;
+}
+
+img,
+video{
+max-width:100%;
 }
 
 /* ================= HEADER ================= */
@@ -63,14 +59,12 @@ display:grid;
 grid-template-columns:1fr auto 1fr;
 align-items:center;
 
-background:rgba(0,0,0,.60);
+background:rgba(0,0,0,.55);
 
-backdrop-filter:blur(16px);
+backdrop-filter:blur(10px);
 
-border-bottom:1px solid rgba(0,191,255,.10);
+border-bottom:1px solid rgba(0,191,255,.12);
 }
-
-/* desktop normal */
 
 .top-mobile{
 display:contents;
@@ -85,7 +79,7 @@ gap:14px;
 
 padding:14px 18px;
 
-width:420px;
+width:380px;
 
 border-radius:24px;
 
@@ -96,15 +90,15 @@ rgba(0,18,45,.96),
 rgba(0,7,20,.96)
 );
 
-border:1px solid rgba(0,191,255,.15);
+border:1px solid rgba(0,191,255,.12);
 
 box-shadow:
-0 0 30px rgba(0,191,255,.08);
+0 0 25px rgba(0,191,255,.08);
 }
 
 .weather-icon{
-width:50px;
-height:50px;
+width:48px;
+height:48px;
 }
 
 .weather-info{
@@ -119,34 +113,34 @@ gap:10px;
 }
 
 #temperature{
-font-size:42px;
+font-size:38px;
 font-weight:800;
 line-height:1;
 }
 
 #city{
-font-size:18px;
+font-size:17px;
 font-weight:800;
 }
 
 #date{
-font-size:13px;
-color:#dbeafe;
+font-size:12px;
 margin-top:4px;
+color:#dbeafe;
 }
 
 #description{
 font-size:12px;
-color:#00bfff;
-font-weight:700;
 margin-top:4px;
+font-weight:700;
+color:#00bfff;
 text-transform:capitalize;
 }
 
 #clock{
 font-size:11px;
-color:#94a3b8;
 margin-top:4px;
+color:#94a3b8;
 }
 
 /* ================= LOGO ================= */
@@ -157,10 +151,11 @@ justify-content:center;
 }
 
 .logo img{
-width:310px;
+width:280px;
+
 filter:
 drop-shadow(
-0 0 18px rgba(0,191,255,.35)
+0 0 18px rgba(0,191,255,.30)
 );
 }
 
@@ -190,12 +185,13 @@ color:#00bfff;
 position:relative;
 
 min-height:100vh;
+min-height:100svh;
 
 display:flex;
 align-items:center;
 justify-content:center;
 
-padding:240px 20px 120px;
+padding:220px 20px 100px;
 
 overflow:hidden;
 }
@@ -209,6 +205,7 @@ width:100%;
 height:100%;
 
 object-fit:cover;
+object-position:center;
 
 z-index:-2;
 }
@@ -217,27 +214,25 @@ z-index:-2;
 content:'';
 
 position:absolute;
-
-width:100%;
-height:100%;
+inset:0;
 
 background:
 linear-gradient(
 180deg,
-rgba(0,0,0,.82),
-rgba(1,6,20,.96)
+rgba(0,0,0,.80),
+rgba(1,6,20,.94)
 );
 
 z-index:-1;
 }
 
 .hero-content{
-max-width:900px;
+max-width:850px;
 text-align:center;
 }
 
 .hero h1{
-font-size:72px;
+font-size:68px;
 line-height:1.1;
 font-weight:800;
 margin-bottom:24px;
@@ -264,15 +259,18 @@ flex-wrap:wrap;
 }
 
 .btn{
-padding:16px 32px;
+padding:16px 30px;
 border-radius:16px;
 font-weight:700;
+
 display:flex;
 align-items:center;
 justify-content:center;
 gap:10px;
-transition:.3s;
+
 text-decoration:none;
+
+transition:.3s;
 }
 
 .btn-primary{
@@ -282,7 +280,9 @@ color:#00111f;
 
 .btn-primary:hover{
 transform:translateY(-4px);
-box-shadow:0 0 24px rgba(0,191,255,.35);
+
+box-shadow:
+0 0 24px rgba(0,191,255,.35);
 }
 
 .btn-secondary{
@@ -298,11 +298,11 @@ color:#00111f;
 /* ================= SERVICES ================= */
 
 .services{
-padding:130px 30px;
+padding:120px 30px;
 
 background:
 linear-gradient(
-rgba(0,5,15,.90),
+rgba(0,5,15,.92),
 rgba(0,5,15,.96)
 ),
 
@@ -316,10 +316,10 @@ margin-bottom:70px;
 }
 
 .section-title h2{
-font-size:68px;
+font-size:64px;
 font-weight:800;
 color:#00bfff;
-margin-bottom:14px;
+margin-bottom:12px;
 }
 
 .section-title p{
@@ -331,6 +331,7 @@ color:#dbeafe;
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:28px;
+
 max-width:1200px;
 margin:auto;
 }
@@ -338,9 +339,9 @@ margin:auto;
 .service-card{
 position:relative;
 
-padding:38px 34px;
+padding:36px 30px;
 
-border-radius:30px;
+border-radius:28px;
 
 background:
 linear-gradient(
@@ -349,7 +350,7 @@ rgba(3,15,35,.96),
 rgba(1,8,20,.98)
 );
 
-border:1px solid rgba(0,191,255,.14);
+border:1px solid rgba(0,191,255,.12);
 
 transition:.35s;
 }
@@ -364,8 +365,8 @@ box-shadow:
 }
 
 .service-icon{
-width:74px;
-height:74px;
+width:72px;
+height:72px;
 
 border-radius:22px;
 
@@ -373,9 +374,9 @@ display:flex;
 align-items:center;
 justify-content:center;
 
-margin-bottom:24px;
+margin-bottom:22px;
 
-font-size:30px;
+font-size:28px;
 color:#00bfff;
 
 background:
@@ -389,12 +390,12 @@ rgba(0,191,255,.04)
 .service-card h3{
 font-size:28px;
 font-weight:800;
-margin-bottom:16px;
+margin-bottom:14px;
 color:#00bfff;
 }
 
 .service-card p{
-font-size:16px;
+font-size:15px;
 line-height:1.8;
 color:#dbeafe;
 }
@@ -434,15 +435,15 @@ border-radius:24px;
 
 .about-content h2{
 font-size:48px;
-color:#00bfff;
 margin-bottom:24px;
+color:#00bfff;
 }
 
 .about-content p{
 font-size:17px;
 line-height:1.9;
-color:#d1d5db;
 margin-bottom:18px;
+color:#d1d5db;
 }
 
 /* ================= CONTACT ================= */
@@ -456,8 +457,10 @@ text-align:center;
 
 overflow:hidden;
 
-background:url('contato-bg.jpg')
-center center/cover no-repeat;
+background-image:url('contato-bg.jpg');
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
 }
 
 .contact::before{
@@ -469,7 +472,7 @@ inset:0;
 background:
 linear-gradient(
 rgba(0,5,20,.82),
-rgba(0,5,20,.90)
+rgba(0,5,20,.92)
 );
 
 z-index:0;
@@ -481,7 +484,7 @@ z-index:1;
 }
 
 .contact h2{
-font-size:46px;
+font-size:44px;
 color:#00bfff;
 margin-bottom:18px;
 }
@@ -492,33 +495,13 @@ color:#d1d5db;
 margin-bottom:34px;
 }
 
-/* MOBILE */
-
-@media(max-width:1000px){
-
-.contact{
-padding:90px 18px;
-background-position:center;
-background-size:cover;
-}
-
-.contact h2{
-font-size:34px;
-}
-
-.contact p{
-font-size:14px;
-}
-
-}
-
 /* ================= FOOTER ================= */
 
 footer{
 padding:24px;
 text-align:center;
-color:#94a3b8;
 font-size:14px;
+color:#94a3b8;
 }
 
 /* ================= MINI MARKET ================= */
@@ -532,7 +515,6 @@ z-index:999;
 
 display:flex;
 flex-direction:column;
-
 gap:8px;
 
 padding:8px;
@@ -542,7 +524,7 @@ border-radius:18px;
 background:
 rgba(2,6,23,.76);
 
-backdrop-filter:blur(14px);
+backdrop-filter:blur(10px);
 }
 
 .market-card{
@@ -663,63 +645,54 @@ display:flex;
 flex-direction:column;
 
 padding:10px;
-
 gap:8px;
 
 background:transparent;
-
 backdrop-filter:none;
-
 border:none;
 }
 
-/* MOBILE TOPO */
-
 .top-mobile{
 width:100%;
+
 display:flex;
 gap:8px;
 align-items:stretch;
 }
 
-/* WEATHER */
-
 .weather-card{
 width:50%;
 
 padding:8px;
-
 gap:8px;
 
-border-radius:20px;
+border-radius:18px;
 }
 
 .weather-icon{
-width:28px;
-height:28px;
+width:24px;
+height:24px;
 }
 
 #temperature{
-font-size:22px;
+font-size:18px;
 }
 
 #city{
-font-size:10px;
+font-size:9px;
 }
 
 #date{
-font-size:8px;
+font-size:7px;
 }
 
 #description{
-font-size:8px;
+font-size:7px;
 }
 
 #clock{
-font-size:8px;
+font-size:7px;
 }
-
-/* LOGO */
 
 .logo{
 width:50%;
@@ -730,7 +703,7 @@ justify-content:center;
 
 padding:8px;
 
-border-radius:20px;
+border-radius:18px;
 
 background:
 linear-gradient(
@@ -742,10 +715,8 @@ rgba(0,7,20,.96)
 
 .logo img{
 width:100%;
-max-width:150px;
+max-width:135px;
 }
-
-/* MENU */
 
 .menu{
 width:100%;
@@ -755,7 +726,7 @@ justify-content:space-around;
 
 padding:10px 6px;
 
-border-radius:16px;
+border-radius:14px;
 
 background:
 rgba(0,0,0,.35);
@@ -764,110 +735,122 @@ backdrop-filter:blur(12px);
 }
 
 .menu a{
-font-size:10px;
+font-size:9px;
 }
 
-/* HERO */
-
 .hero{
-padding:50px 16px 80px;
-min-height:auto;
+padding:40px 14px 70px;
 }
 
 .hero h1{
-font-size:34px;
+font-size:30px;
+line-height:1.2;
+margin-bottom:18px;
 }
 
 .hero p{
-font-size:13px;
+font-size:12px;
 line-height:1.7;
+margin-bottom:28px;
 }
 
-/* BUTTONS */
+.buttons{
+gap:12px;
+}
 
 .btn{
 width:100%;
-padding:14px;
-font-size:13px;
+
+padding:13px;
+
+font-size:12px;
+
+border-radius:14px;
 }
 
-/* SERVICES */
-
 .services{
-padding:80px 14px;
+padding:70px 14px;
+}
+
+.section-title{
+margin-bottom:40px;
 }
 
 .section-title h2{
-font-size:34px;
+font-size:30px;
 }
 
 .section-title p{
-font-size:13px;
+font-size:12px;
 }
 
 .services-grid{
 grid-template-columns:1fr;
-gap:16px;
+gap:14px;
 }
 
 .service-card{
-padding:28px 22px;
+padding:24px 18px;
+border-radius:22px;
 }
 
 .service-icon{
-width:64px;
-height:64px;
-font-size:24px;
+width:56px;
+height:56px;
+font-size:20px;
+margin-bottom:18px;
 }
 
 .service-card h3{
-font-size:24px;
+font-size:20px;
 }
 
 .service-card p{
-font-size:14px;
+font-size:13px;
+line-height:1.7;
 }
-
-/* ABOUT */
 
 .about{
 grid-template-columns:1fr;
-padding:80px 18px;
+
+padding:70px 16px;
+
+gap:30px;
+}
+
+.about img{
+border-radius:18px;
 }
 
 .about-content h2{
-font-size:34px;
+font-size:28px;
 }
 
 .about-content p{
-font-size:14px;
+font-size:13px;
+line-height:1.8;
 }
 
-/* CONTACT */
-
 .contact{
-padding:80px 18px;
+padding:70px 16px;
 }
 
 .contact h2{
-font-size:34px;
+font-size:28px;
 }
 
 .contact p{
-font-size:14px;
+font-size:13px;
 }
-
-/* MARKET */
 
 .mini-market{
 left:5px;
 bottom:5px;
 
 padding:4px;
-
 gap:4px;
 
-border-radius:14px;
+border-radius:12px;
 }
 
 .market-card{
@@ -875,7 +858,7 @@ min-width:95px;
 
 padding:5px 7px;
 
-border-radius:14px;
+border-radius:12px;
 }
 
 .market-icon{
@@ -892,12 +875,12 @@ font-size:8px;
 display:none;
 }
 
-/* WHATSAPP */
-
 .whatsapp{
-width:58px;
-height:58px;
+width:56px;
+height:56px;
+
 font-size:24px;
+
 right:14px;
 bottom:14px;
 }
@@ -916,37 +899,23 @@ bottom:14px;
 
 <div class="weather-card">
 
-<img
-id="weather-icon"
-class="weather-icon"
-src=""
-alt="clima">
+<img id="weather-icon" class="weather-icon" src="" alt="clima">
 
 <div class="weather-info">
 
 <div class="weather-top">
 
-<span id="temperature">
---°C
-</span>
+<span id="temperature">--°C</span>
 
-<span id="city">
-SARANDI-PR
-</span>
+<span id="city">SARANDI-PR</span>
 
 </div>
 
-<div id="date">
-Carregando...
-</div>
+<div id="date">Carregando...</div>
 
-<div id="description">
-Clima...
-</div>
+<div id="description">Clima...</div>
 
-<div id="clock">
---:--
-</div>
+<div id="clock">--:--</div>
 
 </div>
 
@@ -954,9 +923,7 @@ Clima...
 
 <div class="logo">
 
-<img
-src="logo 2026.png"
-alt="logo">
+<img src="logo 2026.png" alt="logo">
 
 </div>
 
@@ -975,48 +942,38 @@ alt="logo">
 
 <section class="hero">
 
-<video autoplay muted loop playsinline>
+<video autoplay muted loop playsinline preload="auto">
 
-<source src="video.mp4"
-type="video/mp4">
+<source src="video.mp4" type="video/mp4">
 
 </video>
 
 <div class="hero-content">
 
 <h1>
-
 Assistência Técnica em
-<span>
-Informática e Celulares
-</span>
-
+<span>Informática e Celulares</span>
 </h1>
 
 <p>
-
 Especialistas em manutenção de computadores,
 notebooks e celulares com atendimento rápido
 e profissional.
-
 </p>
 
 <div class="buttons">
 
 <a href="https://wa.me/5544999999806"
+target="_blank"
 class="btn btn-primary">
 
 <i class="fa-brands fa-whatsapp"></i>
-
 WhatsApp
 
 </a>
 
-<a href="#services"
-class="btn btn-secondary">
-
+<a href="#services" class="btn btn-secondary">
 Ver Serviços
-
 </a>
 
 </div>
@@ -1025,43 +982,32 @@ Ver Serviços
 
 </section>
 
-<section class="services"
-id="services">
+<section class="services" id="services">
 
 <div class="section-title">
 
-<h2>
-Nossos Serviços
-</h2>
+<h2>Nossos Serviços</h2>
 
-<p>
-Atendimento rápido e especializado
-</p>
+<p>Atendimento rápido e especializado</p>
 
 </div>
 
 <div class="services-grid">
 
 <div class="service-card">
-
 <div class="service-icon">
 <i class="fa-solid fa-gears"></i>
 </div>
-
 <h3>Formatação</h3>
-
 <p>
 Instalação, otimização e atualização completa
 do sistema operacional.
 </p>
-
 </div>
 
 <div class="service-card">
 
-<div class="badge">
-MESMO DIA
-</div>
+<div class="badge">MESMO DIA</div>
 
 <div class="service-icon">
 <i class="fa-solid fa-mobile-screen"></i>
@@ -1140,8 +1086,7 @@ para setups gamers.
 
 </section>
 
-<section class="about"
-id="about">
+<section class="about" id="about">
 
 <div class="about-image">
 
@@ -1153,13 +1098,10 @@ alt="assistência">
 
 <div class="about-content">
 
-<h2>
-Sobre Nós
-</h2>
+<h2>Sobre Nós</h2>
 
 <p>
-A Império Manutenções oferece assistência
-técnica especializada em informática e celulares.
+A Império Manutenções oferece assistência técnica especializada em informática e celulares.
 </p>
 
 <p>
@@ -1176,12 +1118,9 @@ em qualidade e desempenho.
 
 </section>
 
-<section class="contact"
-id="contact">
+<section class="contact" id="contact">
 
-<h2>
-Entre em Contato
-</h2>
+<h2>Entre em Contato</h2>
 
 <p>
 Solicite agora mesmo seu orçamento.
@@ -1190,10 +1129,10 @@ Solicite agora mesmo seu orçamento.
 <div class="buttons">
 
 <a href="https://wa.me/5544999999806"
+target="_blank"
 class="btn btn-primary">
 
 <i class="fa-brands fa-whatsapp"></i>
-
 WhatsApp
 
 </a>
@@ -1202,7 +1141,6 @@ WhatsApp
 class="btn btn-secondary">
 
 <i class="fa-solid fa-phone"></i>
-
 Ligar Agora
 
 </a>
@@ -1227,15 +1165,13 @@ Ligar Agora
 ₿
 </div>
 
-<span class="market-price"
-id="btc-price">
+<span class="market-price" id="btc-price">
 R$ 0
 </span>
 
 </div>
 
-<span class="market-change"
-id="btc-change">
+<span class="market-change" id="btc-change">
 0%
 </span>
 
@@ -1249,15 +1185,13 @@ id="btc-change">
 $
 </div>
 
-<span class="market-price"
-id="usd-price">
+<span class="market-price" id="usd-price">
 R$ 0
 </span>
 
 </div>
 
-<span class="market-change"
-id="usd-change">
+<span class="market-change" id="usd-change">
 0%
 </span>
 
@@ -1266,7 +1200,8 @@ id="usd-change">
 </div>
 
 <a class="whatsapp"
-href="https://wa.me/5544999999806">
+href="https://wa.me/5544999999806"
+target="_blank">
 
 <i class="fa-brands fa-whatsapp"></i>
 
@@ -1289,22 +1224,19 @@ const response = await fetch(
 
 const data = await response.json();
 
-document.getElementById(
-'temperature'
-).innerText =
+document.getElementById('temperature').innerText =
 Math.round(data.main.temp) + '°C';
 
-document.getElementById(
-'description'
-).innerText =
+document.getElementById('description').innerText =
 data.weather[0].description;
 
-document.getElementById(
-'weather-icon'
-).src =
+document.getElementById('weather-icon').src =
 `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
 
 }catch(err){
+
+document.getElementById('description').innerText =
+'Sem conexão';
 
 console.log(err);
 
@@ -1316,9 +1248,7 @@ function updateDate(){
 
 const now = new Date();
 
-document.getElementById(
-'date'
-).innerText =
+document.getElementById('date').innerText =
 now.toLocaleDateString(
 'pt-BR',
 {
@@ -1332,43 +1262,30 @@ month:'long'
 
 function updateClock(){
 
-document.getElementById(
-'clock'
-).innerText =
-new Date().toLocaleTimeString(
-'pt-BR'
-);
+document.getElementById('clock').innerText =
+new Date().toLocaleTimeString('pt-BR');
 
 }
 
 /* MARKET */
 
-function setVariation(
-element,
-value
-){
+function setVariation(element,value){
 
-element.classList.remove(
-'up',
-'down'
-);
+element.classList.remove('up','down');
 
 if(value >= 0){
 
 element.classList.add('up');
 
 element.innerText =
-'+' +
-value.toFixed(2) +
-'%';
+'+' + value.toFixed(2) + '%';
 
 }else{
 
 element.classList.add('down');
 
 element.innerText =
-value.toFixed(2) +
-'%';
+value.toFixed(2) + '%';
 
 }
 
@@ -1386,23 +1303,14 @@ await fetch(
 const btcData =
 await btcResponse.json();
 
-document.getElementById(
-'btc-price'
-).innerText =
+document.getElementById('btc-price').innerText =
 'R$ ' +
-Math.round(
-Number(btcData.lastPrice)
-/1000
-) +
+Math.round(Number(btcData.lastPrice)/1000) +
 'k';
 
 setVariation(
-document.getElementById(
-'btc-change'
-),
-Number(
-btcData.priceChangePercent
-)
+document.getElementById('btc-change'),
+Number(btcData.priceChangePercent)
 );
 
 const usdResponse =
@@ -1413,21 +1321,13 @@ await fetch(
 const usdData =
 await usdResponse.json();
 
-document.getElementById(
-'usd-price'
-).innerText =
+document.getElementById('usd-price').innerText =
 'R$ ' +
-Number(
-usdData.USDBRL.bid
-).toFixed(2);
+Number(usdData.USDBRL.bid).toFixed(2);
 
 setVariation(
-document.getElementById(
-'usd-change'
-),
-Number(
-usdData.USDBRL.pctChange
-)
+document.getElementById('usd-change'),
+Number(usdData.USDBRL.pctChange)
 );
 
 }catch(err){
@@ -1448,20 +1348,11 @@ updateClock();
 
 loadMiniMarket();
 
-setInterval(
-updateClock,
-1000
-);
+setInterval(updateClock,1000);
 
-setInterval(
-loadWeather,
-600000
-);
+setInterval(loadWeather,600000);
 
-setInterval(
-loadMiniMarket,
-30000
-);
+setInterval(loadMiniMarket,30000);
 
 </script>
 
