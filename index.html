@@ -437,7 +437,7 @@ rgba(0,5,20,.82),
 rgba(0,5,20,.90)
 ),
 url('fundo-tech.png')
-center/cover no-repeat;
+center center / cover no-repeat;
 }
 
 .about::before{
@@ -850,18 +850,6 @@ grid-template-columns:1fr;
 padding:70px 16px;
 
 gap:30px;
-
-background:
-linear-gradient(
-rgba(0,5,20,.82),
-rgba(0,5,20,.90)
-),
-url('fundo-tech.png')
-center center/cover no-repeat;
-}
-
-background-position:center;
-background-size:cover;
 }
 
 .about img{
@@ -930,25 +918,24 @@ font-size:24px;
 right:14px;
 bottom:14px;
 }
-.services{
-background:
-linear-gradient(
-rgba(0,5,15,.92),
-rgba(0,5,15,.96)
-),
-url('fundo-tech.png')
-center center/cover no-repeat;
-}
 
-.contact{
+
+.about{
+grid-template-columns:1fr;
+
+padding:70px 16px;
+
+gap:30px;
+
 background:
 linear-gradient(
 rgba(0,5,20,.82),
-rgba(0,5,20,.92)
+rgba(0,5,20,.90)
 ),
-url('contato-bg.jpg')
-center center/cover no-repeat;
+url('fundo-tech.png')
+center center / cover no-repeat;
 }
+
 
 }
 
