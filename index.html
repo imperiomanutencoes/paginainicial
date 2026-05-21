@@ -419,6 +419,8 @@ color:#00111f;
 /* ================= ABOUT ================= */
 
 .about{
+position:relative;
+
 padding:120px 40px;
 
 display:grid;
@@ -426,6 +428,38 @@ grid-template-columns:1fr 1fr;
 
 gap:60px;
 align-items:center;
+
+overflow:hidden;
+
+background:
+linear-gradient(
+rgba(0,5,20,.82),
+rgba(0,5,20,.90)
+),
+url('fundo-tech.png')
+center/cover no-repeat;
+}
+
+.about::before{
+content:'';
+
+position:absolute;
+inset:0;
+
+background:
+linear-gradient(
+90deg,
+rgba(0,0,0,.10),
+rgba(0,0,0,.35)
+);
+
+z-index:0;
+}
+
+.about-image,
+.about-content{
+position:relative;
+z-index:1;
 }
 
 .about img{
@@ -816,6 +850,9 @@ grid-template-columns:1fr;
 padding:70px 16px;
 
 gap:30px;
+
+background-position:center;
+background-size:cover;
 }
 
 .about img{
